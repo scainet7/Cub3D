@@ -1,0 +1,13 @@
+NO ./textures/gravel.xpm
+SO ./textures/redpattern.xpm
+WE ./textures/hierba.xpm
+EA ./textures/yelltexpattern.xpm
+
+F 220,100,0
+C 225,30,0
+
+1111111111
+1N00000001
+1010000101
+1000000001
+1111111111

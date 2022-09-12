@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/04 17:56:52 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/12 18:01:18 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ enum e_exit
 	leave,
 	clean,
 	mlx,
-	map
+	map,
+	memory
 };
 
 typedef struct s_game
@@ -44,10 +45,13 @@ typedef struct s_game
 	void	*mlx;
 	void	*win;
 	char	*map_name;
+	char	**map;
+	t_list	*map_list;
 } t_game;
 
 void	ft_check_map(t_game *game, int argc, char **argv);
 void	ft_free_game(t_game *game);
 void	ft_free_map_game(t_game *game);
 void	ft_error_handler(t_game *game, char *str, int sweep);
+void	ft_SHOW_map(t_game *game);
 #endif

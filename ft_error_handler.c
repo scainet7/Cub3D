@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 16:45:21 by snino             #+#    #+#             */
-/*   Updated: 2022/09/04 17:58:42 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/12 18:03:59 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	ft_error_handler(t_game *game, char *str, int sweep)
 //		ft_free_game(game);
 		exit(EXIT_FAILURE);
 	}
-//	else if (sweep == mlx)
-//	{
-//		printf(RED"%s\n"END, str);
-//		exit(EXIT_FAILURE);
-//	}
+	else if (sweep == mlx)
+	{
+		printf(RED"%s\n"END, str);
+		exit(EXIT_FAILURE);
+	}
 //	else if (sweep == map)
 //	{
 //		printf(RED"%s\n"END, str);

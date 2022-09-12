@@ -1,1 +1,1 @@
-# cib3D_snino
+# cub3D_snino

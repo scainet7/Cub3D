@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 18:51:01 by snino             #+#    #+#             */
-/*   Updated: 2022/08/10 16:42:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/13 20:48:15 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char	*ft_strchr(char *s, int c)
 	if (str[i] == (char)c)
 		return (str + i);
 	else
-		return (0);
+		return (NULL);
 }

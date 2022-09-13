@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/09/04 18:05:54 by snino            ###   ########.fr        #
+#    Updated: 2022/09/13 20:00:13 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,9 @@ LIB_mlx			:= -L ./minilibx -lmlx -framework OpenGL -framework AppKit
 
 OBJ_DIR			:=	obj
 
-SRCS 			:=	cub3D.c		ft_check_map.c		ft_free_game.c\
-					ft_error_handler.c	ft_free_map_game.c\
+SRCS 			:=	cub3D.c			ft_check_map.c		ft_free_game.c\
+					ft_pars_map.c	ft_utils_show.c		ft_error_handler.c\
+					ft_free_map_game.c\
 
 OBJ 			:=	$(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(SRCS)))
 

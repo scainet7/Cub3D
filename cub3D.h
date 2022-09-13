@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/12 18:01:18 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/13 20:35:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@ enum e_exit
 	memory
 };
 
+typedef struct s_map
+{
+	char			**maps_line;
+	struct s_map	*next;
+}	t_map;
+
 typedef struct s_game
 {
 	void	*mlx;
@@ -47,11 +53,15 @@ typedef struct s_game
 	char	*map_name;
 	char	**map;
 	t_list	*map_list;
+	t_map	*maps;
+
 } t_game;
 
+void	ft_pars_map(t_game *game, char *line);
 void	ft_check_map(t_game *game, int argc, char **argv);
 void	ft_free_game(t_game *game);
 void	ft_free_map_game(t_game *game);
 void	ft_error_handler(t_game *game, char *str, int sweep);
-void	ft_SHOW_map(t_game *game);
+void	show(t_list *list);
+void	show1(t_map *maps, char *place);
 #endif

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:37:15 by snino             #+#    #+#             */
-/*   Updated: 2022/09/15 14:34:20 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/15 19:21:58 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,15 @@ void	show1(t_map *maps, char *place)
 	int		i;
 
 	temp = maps;
-	printf("%s\n", place);
+	printf(YEL"%s\n"END, place);
 	while (temp)
 	{
 		i = -1;
-		printf("SHOW:%d-> ", i + 2);
 		while (temp->maps_line[++i])
-			printf("'%s':%zu ", temp->maps_line[i], \
-				(size_t)ft_strlen(temp->maps_line[i]));
-		printf("\n");
+		{
+			printf(" %d "BLU"%s"END, i, temp->maps_line[i]);
+		}
 		temp = temp->next;
 	}
+	printf("\n");
 }

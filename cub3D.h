@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/15 16:43:30 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/15 19:45:54 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,25 @@ typedef struct s_game
 	t_list	*type_list;
 	t_list	*color_list;
 	t_list	*map_list;
+	t_map 	*types;
+	t_map   *colors;
 	t_map	*maps;
 }	t_game;
 
+void	ft_free_mass(t_map *line);
+t_map 	*ft_line_new(void *line);
+void	ft_lineadd_back(t_map **mass, t_map *new);
+int		ft_memory_num(t_list *list);
+void	ft_check_type_mass(t_game *game);
 void	ft_pars_map(t_game *game, char *line);
 void	ft_pars_map_list(t_game *game, char *line);
+void	ft_pars_type_mass(t_game *game);
 void	ft_check_map(t_game *game, int argc, char **argv);
 void	ft_free_game(t_game *game);
 void	ft_free_map_game(t_game *game);
 void	ft_error_handler(t_game *game, char *str, int sweep);
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);
+void	show2(t_map *maps, char *place);
+void	show3(t_map *maps, char *place);
 #endif

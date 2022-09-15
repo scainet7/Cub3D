@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 16:16:28 by snino             #+#    #+#             */
-/*   Updated: 2022/09/15 16:42:28 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/15 18:04:33 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,7 @@ void	ft_check_map(t_game *game, int argc, char **argv)
 {
 	ft_check_name_map(game, argc, argv);
 	ft_read_map(game);
+	ft_pars_type_mass(game);
+	ft_check_type_mass(game);
 	printf(GRE"GOOD\n"END);
 }

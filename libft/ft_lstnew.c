@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 15:04:16 by snino             #+#    #+#             */
-/*   Updated: 2022/08/12 17:50:48 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/15 13:14:54 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_list	*ft_lstnew(void *content)
 		return ((void *)0);
 	new -> content = content;
 	new->flag = 0;
+	new->space = 0;
 	new -> next = ((void *)0);
 	return (new);
 }

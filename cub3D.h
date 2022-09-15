@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/13 20:35:40 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/15 16:43:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,20 +48,25 @@ typedef struct s_map
 
 typedef struct s_game
 {
+	int		type;
+	int		color;
+	int		enter;
 	void	*mlx;
 	void	*win;
 	char	*map_name;
 	char	**map;
+	t_list	*type_list;
+	t_list	*color_list;
 	t_list	*map_list;
 	t_map	*maps;
-
-} t_game;
+}	t_game;
 
 void	ft_pars_map(t_game *game, char *line);
+void	ft_pars_map_list(t_game *game, char *line);
 void	ft_check_map(t_game *game, int argc, char **argv);
 void	ft_free_game(t_game *game);
 void	ft_free_map_game(t_game *game);
 void	ft_error_handler(t_game *game, char *str, int sweep);
-void	show(t_list *list);
+void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);
 #endif

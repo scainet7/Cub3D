@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:54:57 by snino             #+#    #+#             */
-/*   Updated: 2022/09/15 19:34:02 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/20 14:52:14 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int	main(int argc, char **argv)
 	show(game.color_list, "color_list");
 	show(game.map_list, "map_list");
 	show1(game.types, "TUPE");
+	show1(game.colors, "COLOR");
 	ft_freelst(game.type_list);
 	ft_freelst(game.color_list);
 	ft_freelst(game.map_list);
 	ft_free_mass(game.types);
+	ft_free_mass(game.colors);
 	return (0);
 }

@@ -1,10 +1,10 @@
-NO ./textures/gravel.xpm
-SO ./textures/redpattern.xpm
-WE ./textures/hierba.xpm
-EA ./textures/yelltexpattern.xpm
+NO textures/lol.txt
+SO textures/redpattern.xpm
+WE textures/hierba.xpm
+EA textures/yelltexpattern.xpm
 
 
-F 102,0,1
+F 102,0,51
 C 102,178,225
 
 

@@ -58,21 +58,17 @@ int	ft_memory_num(t_list *list)
 {
 	t_list	*tmp;
 	int		count;
-	char	*str;
 
 	tmp = list;
 	count = 1;
 	while (tmp)
 	{
-		str = tmp->content;
-		printf(BLU"%s\n"END, str);
 		if (tmp->flag == 1)
 			break ;
 		++count;
 		tmp = tmp->next;
 	}
 	count++;
-	printf(MAG"%d\n"END, count);
 	return (count);
 }
 

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/15 19:45:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/20 14:49:18 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ typedef struct s_game
 	t_map	*maps;
 }	t_game;
 
+void	ft_pars_color_mass(t_game *game);
+void	ft_check_color_mass(t_game *game);
 void	ft_free_mass(t_map *line);
 t_map 	*ft_line_new(void *line);
 void	ft_lineadd_back(t_map **mass, t_map *new);

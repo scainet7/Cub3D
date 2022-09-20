@@ -27,6 +27,7 @@ OBJ_DIR			:=	obj
 SRCS 			:=	cub3D.c			ft_check_map.c			ft_check_type_mass.c\
 					ft_pars_map.c	ft_utils_show.c			ft_error_handler.c\
 					ft_free_game.c	ft_utils_pars_map.c		ft_free_map_game.c\
+					ft_pars_color_mass.c \
 
 OBJ 			:=	$(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(SRCS)))
 

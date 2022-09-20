@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/20 14:49:18 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/20 19:46:41 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,10 @@ typedef struct s_game
 	t_list	*map_list;
 	t_map 	*types;
 	t_map   *colors;
-	t_map	*maps;
 }	t_game;
 
+void	ft_check_map_mass(t_game *game);
+void	ft_pars_map_mass(t_game *game);
 void	ft_pars_color_mass(t_game *game);
 void	ft_check_color_mass(t_game *game);
 void	ft_free_mass(t_map *line);
@@ -79,6 +80,5 @@ void	ft_free_map_game(t_game *game);
 void	ft_error_handler(t_game *game, char *str, int sweep);
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);
-void	show2(t_map *maps, char *place);
-void	show3(t_map *maps, char *place);
+void	show2(char **maps, char *place);
 #endif

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:31:24 by snino             #+#    #+#             */
-/*   Updated: 2022/09/20 15:38:16 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/20 15:38:52 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	ft_pars_color_mass(t_game *game)
 	tmp_color = NULL;
 	while (tmp_list)
 	{
-		color = (char **) malloc(sizeof (char *) * ft_memory_num(tmp_list) + 2);
+		color = (char **) malloc(sizeof (char *) * ft_memory_num(tmp_list));
 		i = -1;
 		while (tmp_list && tmp_list->flag == 0)
 		{

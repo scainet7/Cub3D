@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/09/20 14:31:58 by snino            ###   ########.fr        #
+#    Updated: 2022/09/22 14:57:11 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ LIB_mlx			:= -L ./minilibx -lmlx -framework OpenGL -framework AppKit
 
 OBJ_DIR			:=	obj
 
-SRCS 			:=	cub3D.c			ft_check_map.c			ft_check_type_mass.c\
-					ft_pars_map.c	ft_utils_show.c			ft_error_handler.c\
-					ft_free_game.c	ft_utils_pars_map.c		ft_free_map_game.c\
-					ft_pars_color_mass.c 		ft_pars_map_mass.c \
+SRCS 			:=	cub3D.c					ft_check_map.c			ft_check_type_mass.c\
+					ft_pars_map.c			ft_utils_show.c			ft_error_handler.c\
+					ft_free_game.c			ft_utils_pars_map.c		ft_free_map_game.c\
+					ft_pars_color_mass.c 	ft_pars_map_mass.c		ft_utils_pars_map_mass.c\
 
 OBJ 			:=	$(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(SRCS)))
 

@@ -79,5 +79,4 @@ void	ft_check_map(t_game *game, int argc, char **argv)
 	ft_check_color_mass(game);
 	ft_pars_map_mass(game);
 	ft_check_map_mass(game);
-	printf(GRE"GOOD\n"END);
 }

@@ -69,6 +69,7 @@ void	ft_check_color_mass(t_game *game);
 void	ft_free_mass(t_map *line);
 t_map 	*ft_line_new(void *line);
 void	ft_lineadd_back(t_map **mass, t_map *new);
+int		ft_memory_num1(t_list *list);
 int		ft_memory_num(t_list *list);
 void	ft_check_type_mass(t_game *game);
 void	ft_pars_map(t_game *game, char *line);

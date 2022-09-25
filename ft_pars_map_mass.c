@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:41:54 by snino             #+#    #+#             */
-/*   Updated: 2022/09/22 16:07:12 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/25 12:49:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ static void	ft_check_map_mass_space(t_game *game)
 			ft_error_handler(game, "Error\nINVALID_MAP", leave);
 		while (mass_map[i][j])
 		{
-			if (mass_map[i][j] == ' ' && \
-				(mass_map[i][j - 1] != '1' || mass_map[i][j + 1] != '1'))
-				ft_error_handler(game, "Error\nINVALID_MAP", leave);
+			if (mass_map[i][j] == ' ' && mass_map[i][j + 1] != ' ')
+				if (mass_map[i][j - 1] != '1' && mass_map[i][j + 1] != '1')
+					ft_error_handler(game, "Error\nINVALID_MAP", leave);
 			j++;
 		}
 		j--;
@@ -114,6 +114,7 @@ void	ft_check_map_mass(t_game *game)
 	ft_check_map_mass_symb(game);
 	ft_check_map_mass_space(game);
 	ft_check_map_mass_space2(game, i);
+	ft_check_map_mass_angle(game, i);
 }
 
 void	ft_pars_map_mass(t_game *game)

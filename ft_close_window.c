@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_map_game.c                                 :+:      :+:    :+:   */
+/*   ft_close_window.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/08 17:23:07 by snino             #+#    #+#             */
+/*   Created: 2022/03/08 15:54:31 by snino             #+#    #+#             */
 /*   Updated: 2022/09/25 12:49:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
-//
-//void	ft_free_map_game(t_game *game)
-//{
-//	int	y_num;
-//
-//	y_num = 0;
-//	while (game->lines.map[y_num])
-//	{
-//		free(game->lines.map[y_num]);
-//		y_num++;
-//	}
-//	free(game->lines.map);
-//}
+
+int	ft_close_window(t_game *game)
+{
+	ft_error_handler(game, "\nYOU_EXIT_GAME", clean);
+	return (0);
+}

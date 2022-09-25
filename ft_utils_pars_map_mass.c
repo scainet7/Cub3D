@@ -28,4 +28,3 @@ int	ft_memory_num1(t_list *list)
 	}
 	return (count);
 }
-

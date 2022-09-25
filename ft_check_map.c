@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 16:16:28 by snino             #+#    #+#             */
-/*   Updated: 2022/09/20 19:48:21 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/24 20:18:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,32 +41,24 @@ static void	ft_read_map(t_game *game)
 	close(fd);
 }
 
-static int	ft_name_map(char *argv)
-{
-	size_t	res;
-	char	*serch;
-
-	serch = ".cub";
-	res = ft_strlen(ft_strchr(argv, serch[0]));
-	if (!ft_strstr(argv, serch) || res != 4)
-		return (1);
-	else
-		return (0);
-}
-
 static void	ft_check_name_map(t_game *game, int argc, char **argv)
 {
-	if (argc == 2 && !(ft_name_map(argv[1])))
-		game->map_name = argv[1];
-	else if (argc < 2)
-		ft_error_handler(game, "Error\nNO_MAP", leave);
-	else
+	size_t res;
+	char *serch;
+
+	serch = ".cub";
+	if (argc == 2)
 	{
-		if (ft_name_map(argv[1]))
+		res = ft_strlen(ft_strchr(argv[1], serch[0]));
+		if (!ft_strstr(argv[1], serch))
+			ft_error_handler(game, "Error\nINVALID_NUM_ARGUMENTS", leave);
+		if (res != 4)
 			ft_error_handler(game, "Error\nINVALID_MAP_EXTENSION", leave);
 		else
-			ft_error_handler(game, "Error\nINVALID_NUM_ARGUMENTS", leave);
+			game->map_name = argv[1];
 	}
+	else if (argc < 2)
+		ft_error_handler(game, "Error\nNO_MAP", leave);
 }
 
 void	ft_check_map(t_game *game, int argc, char **argv)

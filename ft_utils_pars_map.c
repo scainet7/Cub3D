@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 16:20:26 by snino             #+#    #+#             */
-/*   Updated: 2022/09/20 17:18:59 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/25 12:49:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_free_mass(t_map *line)
 	}
 }
 
-t_map 	*ft_line_new(void *line)
+t_map	*ft_line_new(void *line)
 {
 	t_map	*new_map;
 
@@ -39,7 +39,7 @@ t_map 	*ft_line_new(void *line)
 
 void	ft_lineadd_back(t_map **mass, t_map *new)
 {
-	t_map 	*last;
+	t_map	*last;
 
 	if (!mass || !new)
 		return ;

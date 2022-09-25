@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:45:32 by snino             #+#    #+#             */
-/*   Updated: 2022/09/20 14:49:18 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/25 12:49:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ static void	ft_pars_line_color(t_game *game, char *line)
 		}
 		else
 		{
-			ft_lstadd_back(&game->color_list, ft_lstnew(ft_strcdup(line, '\n')));
+			ft_lstadd_back(&game->color_list, \
+						ft_lstnew(ft_strcdup(line, '\n')));
 			ft_lstlast(game->color_list)->flag = 1;
 			line = NULL;
 		}

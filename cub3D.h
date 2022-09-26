@@ -83,6 +83,8 @@ typedef struct s_map
 
 typedef struct s_game
 {
+	int x;
+	int y;
 	int		type;
 	int		color;
 	int		enter;

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/09/25 20:52:44 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/26 18:36:37 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ static void	ft_record_color(t_game *game)
 
 static void	ft_record_types(t_game *game)
 {
-	int		y;
-	int		x;
+	int 	x;
+	int 	y;
 	t_map 	*types;
 	char	**tmp_types;
 
@@ -51,19 +51,17 @@ static void	ft_record_types(t_game *game)
 	{
 		tmp_types = types->maps_line;
 		if (!ft_strncmp(tmp_types[0], "NO", 2))
-		{
-//			tmp_types[1] = tmp_types[1] + 2;
-			game->img.wall_no = mlx_xpm_file_to_image(game->mlx, &tmp_types[1][1], &x, &y);
-		}
+			game->img.wall_no = mlx_xpm_file_to_image(
+					game->mlx, &tmp_types[1][2], &x, &y);
 		if (!ft_strncmp(tmp_types[0], "SO", 2))
 			game->img.wall_so = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][1], &x, &y);
+					game->mlx, &tmp_types[1][2], &x, &y);
 		if (!ft_strncmp(tmp_types[0], "WE", 2))
 			game->img.wall_we = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][1], &x, &y);
+					game->mlx, &tmp_types[1][2], &x, &y);
 		if (!ft_strncmp(tmp_types[0], "EA", 2))
 			game->img.wall_ea = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][1], &x, &y);
+					game->mlx, &tmp_types[1][2], &x, &y);
 		types = types->next;
 	}
 }

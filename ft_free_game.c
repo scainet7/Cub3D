@@ -6,7 +6,7 @@
 /*   By: snino <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 17:18:12 by snino             #+#    #+#             */
-/*   Updated: 2022/09/25 19:47:48 by snino            ###   ########.fr       */
+/*   Updated: 2022/09/26 18:42:13 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_free_map_utils_img(t_game *game)
 {
-	mlx_destroy_image(game->mlx, game->img.wall);
+	mlx_destroy_image(game->mlx, game->img.wall_so);
 //	mlx_destroy_image(game->mlx, game->img.wall_ea);
 //	mlx_destroy_image(game->mlx, game->img.wall_no);
 //	mlx_destroy_image(game->mlx, game->img.wall_so);
@@ -32,5 +32,5 @@ void	ft_free_game(t_game *game)
 //	mlx_destroy_image(game->mlx, game->player.p.ptr);
 //	ft_free_map_game(game);
 //	mlx_destroy_image(game->mlx, game->img.ptr);
-//	mlx_destroy_window(game->mlx, game->win);
+	mlx_destroy_window(game->mlx, game->win);
 }

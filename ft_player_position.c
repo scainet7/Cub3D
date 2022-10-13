@@ -78,11 +78,11 @@ void	ft_player_position(t_game *game)
 			{
 				if (tmp_map[x][y] == 'N')
 					ft_north(game, x, y);
-				if (tmp_map[x][y] == 'S')
+				else if (tmp_map[x][y] == 'S')
 					ft_south(game, x, y);
-				if (tmp_map[x][y] == 'W')
+				else if (tmp_map[x][y] == 'W')
 					ft_west(game, x, y);
-				if (tmp_map[x][y] == 'E')
+				else if (tmp_map[x][y] == 'E')
 					ft_east(game, x, y);
 			}
 		}

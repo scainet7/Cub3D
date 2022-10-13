@@ -14,7 +14,7 @@
 
 static void	ft_free_map_utils_img(t_game *game)
 {
-	mlx_destroy_image(game->mlx, game->img.wall_so);
+	mlx_destroy_image(game->win.mlx, game->img.wall_so);
 //	mlx_destroy_image(game->mlx, game->img.wall_ea);
 //	mlx_destroy_image(game->mlx, game->img.wall_no);
 //	mlx_destroy_image(game->mlx, game->img.wall_so);
@@ -32,5 +32,5 @@ void	ft_free_game(t_game *game)
 //	mlx_destroy_image(game->mlx, game->player.p.ptr);
 //	ft_free_map_game(game);
 //	mlx_destroy_image(game->mlx, game->img.ptr);
-	mlx_destroy_window(game->mlx, game->win);
+	mlx_destroy_window(game->win.mlx, game->win.win);
 }

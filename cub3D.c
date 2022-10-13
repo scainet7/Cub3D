@@ -6,36 +6,11 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:54:57 by snino             #+#    #+#             */
-/*   Updated: 2022/09/26 18:41:37 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/13 18:00:37 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
-
-//int	ft_draw_game(t_game *game)
-//{
-//
-//}
-
-void	ft_init_game(t_game *game)
-{
-	game->mlx = mlx_init();
-	game->win = mlx_new_window(game->mlx, WIDTH,
-							  HEIGHT, "cub3D");
-	if (game->win == NULL)
-		ft_error_handler(game, "Error\nINVALID_WINDOW", clean);
-	ft_record(game);
-	ft_player_position(game);
-	game->img.ptr = mlx_new_image(game->mlx, WIDTH, HEIGHT);
-	if (game->img.ptr == NULL)
-		ft_error_handler(game, "Error\nFailure of creating image pointer\n", clean);
-//	game->img.addr = mlx_get_data_addr(game->img.ptr, &game->img.bits_per_pixel, &game->img.line_length, &game->img.endian);
-//	if (game->img.addr == NULL)
-//		ft_error_handler(game, "Error\nFailure of creating image address\n", clean);
-	mlx_hook(game->win, X_DESTROY, (0L), &ft_close_window, &game);
-	mlx_loop(game->mlx);
-//	mlx_loop_hook(game->mlx, ft_draw_game, &game);
-}
 
 void ft_free_map(t_game *game)
 {

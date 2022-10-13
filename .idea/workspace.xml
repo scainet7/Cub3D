@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="CUB_3D" targetName="make" />
+      <config projectName="CUB_3D" targetName="cub3D" />
+      <config projectName="CUB_3D" targetName="re" />
+      <config projectName="CUB_3D" targetName="GNUmakefile" />
+      <config projectName="CUB_3D" targetName="fclean" />
+      <config projectName="CUB_3D" targetName="all" />
+      <config projectName="CUB_3D" targetName="makelibft" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70ad90ed-e44f-444a-a8b5-2d4f6c2b1001" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cub3D.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cub3D.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_check_map.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_check_type_mass.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_close_window.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_draw.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_error_handler.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_free_game.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_free_map_game.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_init_game.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_pars_color_mass.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_pars_map.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_pars_map_mass.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_pars_map_mass2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_player_position.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_raycast.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_record.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils_pars_map.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils_pars_map_mass.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utils_show.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstadd_back.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstadd_front.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstclear.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstdelone.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstiter.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstlast.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstmap.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstnew.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Bonus_Part/ft_lstsize.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/ft_freelst.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/ft_getword_mod.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/ft_isspace.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/ft_strcat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/ft_strcdup.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/ft_strstr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/get_next_line.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Other_and_Personal/get_next_line_utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_atoi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_bzero.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_calloc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_isalnum.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_isalpha.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_isascii.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_isdigit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_isprint.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_memchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_memcmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_memcpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_memmove.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_memset.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strdup.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strlcat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strlcpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strlen.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strncmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strnstr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_strrchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_tolower.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part1/ft_toupper.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_itoa.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_putchar_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_putendl_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_putnbr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_putstr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_split.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_striteri.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_strjoin.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_strmapi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_strtrim.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/Part2/ft_substr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/libft.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/b.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map1_bigger.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map1_lil.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/font.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/interface.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/man/man3/mlx.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/man/man3/mlx_loop.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/man/man3/mlx_new_image.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/man/man3/mlx_new_window.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/man/man3/mlx_pixel_put.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_image.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_init.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_png.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_rgb.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_string_put.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_window.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx/mlx_xpm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/Makefile.gen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/Makefile.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/configure" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man1/mlx.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man1/mlx_loop.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man1/mlx_new_image.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man1/mlx_new_window.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man1/mlx_pixel_put.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man3/mlx.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man3/mlx_loop.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man3/mlx_new_image.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man3/mlx_new_window.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/man/man3/mlx_pixel_put.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_clear_window.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_destroy_display.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_destroy_image.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_destroy_window.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_expose_hook.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_ext_randr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_flush_event.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_get_color_value.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_get_data_addr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_hook.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_anti_resize_win.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_do_nothing.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_get_visual.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_param_event.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_set_win_event_mask.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_str_to_wordtab.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_int_wait_first_expose.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_key_hook.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_lib_xpm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_loop.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_loop_hook.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_mouse.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_mouse_hook.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_new_image.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_new_window.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_pixel_put.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_put_image_to_window.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_rgb.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_screen_size.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_set_font.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_string_put.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_xpm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/mlx_xpm.c.ok" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/rgb2c.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/Makefile.gen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/Makefile.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/mlx-test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/new_win.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/open.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/open24.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/open30.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibx_linux/test/run_tests.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/font.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/font.xcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_init_loop.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_int.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_int_str_to_wordtab.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_mouse.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_new_image.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_new_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_new_window.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_opengl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_opengl.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_png.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_png.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_rgb.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_shaders.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minilibxo/mlx_xpm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/1.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/128_map.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/2.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/3.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/42.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/64_map.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/base.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/0.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/0.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/0.cubbi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/0.hello" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/1.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/100.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/101.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/105.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/106.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/107.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/108.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/109.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/110.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/111.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/112.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/113.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/117.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/118.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/119.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/12.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/120.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/121.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/122.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/123.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/127.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/128.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/129.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/13.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/130.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/131.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/132.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/133.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/134.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/135.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/138.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/14.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/140.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/141.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/142.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/143.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/144.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/145.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/146.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/15.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/150.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/151.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/152.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/153.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/154.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/155.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/156.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/157.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/158.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/16.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/162.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/163.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/165.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/169.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/17.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/170.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/171.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/172.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/173.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/174.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/175.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/176.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/177.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/178.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/179.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/18.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/180.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/181.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/182.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/183.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/184.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/185.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/186.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/187.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/188.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/189.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/19.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/190.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/191.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/192.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/193.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/194.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/195.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/196.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/197.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/198.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/199.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/2.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/20.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/200.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/201.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/202.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/26.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/28.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/3.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/30.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/31.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/32.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/33.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/34.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/35.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/36.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/37.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/38.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/39.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/4.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/40.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/41.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/42.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/43.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/44.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/45.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/46.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/47.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/48.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/49.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/5.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/50.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/51.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/52.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/53.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/54.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/55.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/56.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/57.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/58.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/59.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/6.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/60.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/61.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/62.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/63.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/64.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/65.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/66.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/67.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/68.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/69.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/70.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/71.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/72.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/73.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/74.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/75.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/76.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/77.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/78.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/82.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/83.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/84.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/85.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/86.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/87.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/88.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/89.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/90.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/93.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/95.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/96.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/97.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/98.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/invalid/99.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/0.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/10.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/11.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/12.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/13.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/14.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/15.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/16.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/17.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/18.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/19.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/20.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/21.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/22.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/23.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/24.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/25.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/26.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/27.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/28.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/29.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/30.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/31.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/32.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/33.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/34.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/35.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/36.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/37.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/38.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/39.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/4.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/40.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/41.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/42.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/43.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/44.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/45.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/46.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/47.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/48.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/49.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/5.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/50.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/51.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/52.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/53.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/54.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/55.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/56.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/57.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/58.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/59.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/6.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/60.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/61.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/62.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/63.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/64.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/65.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/66.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/67.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/68.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/69.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/7.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/70.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/71.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/72.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/73.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/74.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/75.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/76.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/77.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/78.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/79.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/8.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/80.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/81.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/82.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/83.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/84.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/85.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/86.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/9.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/valid/pride.cub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/bb.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/blue_wall.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/cc.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/gravel.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/green_wall.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/hierba.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/redpattern.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/wall.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/yelltexpattern.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/yelltextile.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/yy.xpm" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MakefileLocalSettings">
+    <option name="toolchainName" value="Default" />
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="CUB_3D" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="CUB_3D" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3.2" />
+  </component>
+  <component name="ProjectId" id="2G87w9WNr5tTNSa8XCV3HAIAShN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MakefileSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Mac_Os" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Application.all">
+    <configuration name="GNUmakefile" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="maps/map1_bigger.cub" REDIRECT_INPUT="true" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="Makefile" CONFIG_NAME="Makefile" version="1" RUN_PATH="./cub3D">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="Unnamed" CONFIG_NAME="Unnamed" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="maps/map1_bigger.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="./cub3D">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cub3D" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="cub3D" CONFIG_NAME="cub3D" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fclean" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="fclean" CONFIG_NAME="fclean" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="make" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="make" CONFIG_NAME="make" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="makelibft" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="makelibft" CONFIG_NAME="makelibft" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="re" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CUB_3D" TARGET_NAME="re" CONFIG_NAME="re" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" nameIsGenerated="true">
+      <makefile filename="" target="" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Application.GNUmakefile" />
+      <item itemvalue="Makefile Application.all" />
+      <item itemvalue="Makefile Application.fclean" />
+      <item itemvalue="Makefile Application.makelibft" />
+      <item itemvalue="Makefile Application.re" />
+      <item itemvalue="Makefile Application.cub3D" />
+      <item itemvalue="Makefile Application.make" />
+      <item itemvalue="Makefile Application.Unnamed" />
+      <item itemvalue="Makefile Target.Unnamed" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70ad90ed-e44f-444a-a8b5-2d4f6c2b1001" name="Changes" comment="" />
+      <created>1665758594709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665758594709</updated>
+      <workItem from="1665758595887" duration="6000" />
+      <workItem from="1665846280280" duration="3437000" />
+      <workItem from="1665849813232" duration="8553000" />
+      <workItem from="1665910737961" duration="196000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Mac_Os/ft_init_game.c</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/cub3D.c</url>
+          <line>49</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>35</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>37</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_mlx_utils.c</url>
+          <line>28</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_mlx_utils.c</url>
+          <line>23</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_mlx_utils.c</url>
+          <line>27</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_draw.c</url>
+          <line>14</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_raycast.c</url>
+          <line>103</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_draw.c</url>
+          <line>74</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_draw.c</url>
+          <line>87</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_draw.c</url>
+          <line>62</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_draw.c</url>
+          <line>36</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_draw.c</url>
+          <line>34</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>33</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>34</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>36</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>31</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>28</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>29</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>30</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>27</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>26</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>24</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>22</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>19</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>20</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ft_init_game.c</url>
+          <line>18</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/cub3D.c</url>
+          <line>14</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -23,6 +23,14 @@ static void	ft_check_types_file(t_game *game)
 		fd = open(mass_type->maps_line[1], O_RDONLY);
 		if (fd < 0)
 			ft_error_handler(game, "Error\nNO_TEXTURE_FILE", leave);
+		if (ft_strnstr(mass_type->maps_line[0], "NO", 3))
+			game->img.tex_no = ft_strdup(mass_type->maps_line[1]);
+		if (ft_strnstr(mass_type->maps_line[0], "SO", 3))
+			game->img.tex_so = ft_strdup(mass_type->maps_line[1]);
+		if (ft_strnstr(mass_type->maps_line[0], "WE", 3))
+			game->img.tex_we = ft_strdup(mass_type->maps_line[1]);
+		if (ft_strnstr(mass_type->maps_line[0], "EA", 3))
+			game->img.tex_ea = ft_strdup(mass_type->maps_line[1]);
 		close(fd);
 		mass_type = mass_type->next;
 	}

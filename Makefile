@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/10/13 18:08:21 by snino            ###   ########.fr        #
+#    Updated: 2022/10/15 18:17:29 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,12 +26,14 @@ OBJ_DIR			:=	obj
 
 SRCS 			:=	cub3D.c\
 					ft_draw.c\
+					ft_utils.c\
 					ft_record.c\
 					ft_raycast.c\
 					ft_pars_map.c\
 					ft_init_game.c\
 					ft_check_map.c\
 					ft_free_game.c\
+					ft_mlx_utils.c\
 					ft_utils_show.c\
 					ft_close_window.c\
 					ft_free_map_game.c\

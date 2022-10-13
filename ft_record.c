@@ -52,16 +52,16 @@ static void	ft_record_types(t_game *game)
 		tmp_types = types->maps_line;
 		if (!ft_strncmp(tmp_types[0], "NO", 2))
 			game->img.wall_no = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][2], &x, &y);
+					game->win->mlx, &tmp_types[1][2], &x, &y);
 		if (!ft_strncmp(tmp_types[0], "SO", 2))
 			game->img.wall_so = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][2], &x, &y);
+					game->win->mlx, &tmp_types[1][2], &x, &y);
 		if (!ft_strncmp(tmp_types[0], "WE", 2))
 			game->img.wall_we = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][2], &x, &y);
+					game->win->mlx, &tmp_types[1][2], &x, &y);
 		if (!ft_strncmp(tmp_types[0], "EA", 2))
 			game->img.wall_ea = mlx_xpm_file_to_image(
-					game->mlx, &tmp_types[1][2], &x, &y);
+					game->win->mlx, &tmp_types[1][2], &x, &y);
 		types = types->next;
 	}
 }

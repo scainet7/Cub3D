@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 18:01:40 by snino             #+#    #+#             */
-/*   Updated: 2022/10/13 19:55:08 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/15 18:17:29 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,32 @@ void	draw_texture(t_game *game, t_win *tex, int x, int shade)
 		game->raycast->color = get_tex_color_pixel(tex, \
 			game->raycast->tex_x, game->raycast->tex_y);
 		if (shade == 0)
-			my_mlx_pixel_put(game->win, x, y, game->raycast->color);
+			my_mlx_pixel_put(game->win->win, x, y, game->raycast->color);
 		else
-			my_mlx_pixel_put(game->win, x, y, add_shade(0.2, game->raycast->color));
+			my_mlx_pixel_put(game->win->win, x, y, add_shade(0.2, game->raycast->color));
 		++y;
 	}
 }
 
 static void ft_draw_floor(t_game *game, int x)
 {
-	
+	int	y;
+
+	y = 0;
+	while (y < HEIGHT)
+	{
+		if (y < game->raycast->draw_start)
+		{
+			my_mlx_pixel_put(game->win->win, x, y, create_rgb(game->img.ceiling[0], \
+					game->img.ceiling[1], game->img.ceiling[2]));
+		}
+		else if (y >= game->raycast->draw_end)
+		{
+			my_mlx_pixel_put(game->win->win, x, y, create_rgb(game->img.floor[0], \
+					game->img.floor[1], game->img.floor[2]));
+		}
+		++y;
+	}
 }
 
 static void ft_draw_wall(t_game *game, int x)
@@ -69,6 +85,6 @@ void	ft_draw_game(t_game *game, int x)
 				game->raycast->ray_dir_x;
 	}
 	game->raycast->wall -= floor((game->raycast->wall));
-//	ft_draw_wall(game, x);
-//	ft_draw_floor_and_ceiling(game, x);
+	ft_draw_wall(game, x);
+	ft_draw_floor(game, x);
 }

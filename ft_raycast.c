@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:48:32 by snino             #+#    #+#             */
-/*   Updated: 2022/10/13 17:51:21 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/15 19:41:30 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void ft_dda(t_game *game)
 			game->raycast->map_y += game->raycast->step_y;
 			game->raycast->side = 1;
 		}
-		if (game->map[game->raycast->map_y][game->raycast->map_x] == '1')
+		if (game->map[game->raycast->map_x][game->raycast->map_y] == '1')
 			game->raycast->hit = 1;
 		ft_dda_continuation(game);
 	}

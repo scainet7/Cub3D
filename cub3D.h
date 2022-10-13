@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/13 20:07:08 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/15 20:46:12 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,21 @@
 # define MAG "\033[35m"
 # define WIDTH			900
 # define HEIGHT			700
+# define ROTSPEED  0.5
+# define MOVESPEED 0.11
 # define X_EXPOSE		12
 # define X_DESTROY		17
 # define FOV			0.66
 # define IMG			64
-# define UP 			13
-# define DOWN 			1
-# define LEFT 			0
-# define RIGHT			2
+#  define UP		126
+#  define DOWN	    125
+#  define LEFT	    123
+#  define RIGHT	    124
+#  define W_UP		13
+#  define S_DOWN 	1
+#  define A_LEFT 	0
+#  define D_RIGHT	2
+#  define ESC		53
 
 enum e_exit
 {
@@ -57,6 +64,8 @@ typedef struct s_player_position
 	double			dir_y;
 	double			plane_x;
 	double			plane_y;
+	double			rot_speed;
+	double			move_speed;
 }	t_pp;
 
 typedef struct s_img
@@ -67,6 +76,10 @@ typedef struct s_img
 	int				line_length;
 	int				bits_per_pixel;
 	char			*addr;
+	char			*tex_no;
+	char			*tex_so;
+	char			*tex_we;
+	char			*tex_ea;
 	void			*wall_no;
 	void			*wall_so;
 	void			*wall_we;
@@ -123,8 +136,6 @@ typedef struct s_window
 
 typedef struct s_game
 {
-	int 			x;
-	int 			y;
 	int				type;
 	int 			width;
 	int				color;
@@ -134,7 +145,7 @@ typedef struct s_game
 	char			*map_name;
 	t_pp			*player;
 	t_img 			img;
-	t_win			win;
+	t_win			*win;
 	t_win			*s_tex;
 	t_win			*n_tex;
 	t_win			*w_tex;
@@ -180,4 +191,18 @@ void	ft_error_handler(t_game *game, char *str, int sweep);
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);
 void	show2(char **maps, char *place);
+//utils
+void	init_data_for_textures_and_speed(t_game *game);
+int		add_shade(double distance, int color);
+int		create_rgb(int r, int g, int b);
+//mlx_utils
+void	img_to_xpm_data_my(t_win *win, char *path, t_win *data);
+unsigned int	get_tex_color_pixel(t_win *img, int x, int y);
+void			my_mlx_pixel_put(t_win *win, int x, int y, int color);
+//hook
+void	move_player_right_left(t_game *game, int key_code, double move_speed);
+void	rotate_player_view(t_game *game, double rot_speed);
+void	move_player_up_down(t_game *game, int key_code, double move_speed);
+int	close_win(t_game *game);
+int	key_hook(int key_code, t_game *game);
 #endif

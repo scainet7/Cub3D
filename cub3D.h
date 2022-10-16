@@ -136,6 +136,7 @@ typedef struct s_window
 
 typedef struct s_game
 {
+<<<<<<< HEAD
 	int				type;
 	int 			width;
 	int				color;
@@ -157,6 +158,22 @@ typedef struct s_game
 	t_map			*types;
 	t_map			*colors;
 
+=======
+	int		type;
+	int		color;
+	int		enter;
+	void	*mlx;
+	void	*win;
+	char	*map_name;
+	char	**map;
+	t_img 	img;
+	t_list	*type_list;
+	t_list	*color_list;
+	t_list	*map_list;
+	t_map	*types;
+	t_map	*colors;
+	t_pp	*player;
+>>>>>>> parent of 3f6eeec (V1.0 fixed init textur)
 }	t_game;
 
 //pars

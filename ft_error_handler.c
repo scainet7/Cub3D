@@ -19,7 +19,7 @@ void	ft_error_handler(t_game *game, char *str, int sweep)
 	if (sweep == clean)
 	{
 		printf(RED"%s\n"END, str);
-//		ft_free_game(game);
+		ft_free_game(game);
 		exit(EXIT_FAILURE);
 	}
 	else if (sweep == mlx)

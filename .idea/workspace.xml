@@ -149,13 +149,13 @@
     </configuration>
     <list>
       <item itemvalue="Makefile Application.GNUmakefile" />
+      <item itemvalue="Makefile Application.Unnamed" />
       <item itemvalue="Makefile Application.all" />
+      <item itemvalue="Makefile Application.cub3D" />
       <item itemvalue="Makefile Application.fclean" />
+      <item itemvalue="Makefile Application.make" />
       <item itemvalue="Makefile Application.makelibft" />
       <item itemvalue="Makefile Application.re" />
-      <item itemvalue="Makefile Application.cub3D" />
-      <item itemvalue="Makefile Application.make" />
-      <item itemvalue="Makefile Application.Unnamed" />
       <item itemvalue="Makefile Target.Unnamed" />
     </list>
   </component>

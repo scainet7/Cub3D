@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:04:22 by snino             #+#    #+#             */
-/*   Updated: 2022/10/15 19:18:41 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/17 16:04:20 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_north(t_game *game, int x, int y)
 {
-	game->player->x = 11;
+	game->player->x = x;
 	game->player->y = y;
 	game->player->p_x = x + 0.5;
 	game->player->p_y = y + 0.5;
@@ -66,7 +66,7 @@ void	ft_player_position(t_game *game)
 	int 	y;
 	char	**tmp_map;
 
-	x = -1;
+	x = 0;
 	tmp_map = game->map;
 	while(tmp_map[++x])
 	{
@@ -78,11 +78,11 @@ void	ft_player_position(t_game *game)
 			{
 				if (tmp_map[x][y] == 'N')
 					ft_north(game, x, y);
-				else if (tmp_map[x][y] == 'S')
+				if (tmp_map[x][y] == 'S')
 					ft_south(game, x, y);
-				else if (tmp_map[x][y] == 'W')
+				if (tmp_map[x][y] == 'W')
 					ft_west(game, x, y);
-				else if (tmp_map[x][y] == 'E')
+				if (tmp_map[x][y] == 'E')
 					ft_east(game, x, y);
 			}
 		}

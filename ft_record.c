@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 17:41:43 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/17 20:30:01 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,34 @@ static void	ft_record_color(t_game *game)
 			game->img->ceiling[2] = ft_atoi(tmp_color[3]);
 		}
 		color = color->next;
+	}
+}
+
+static void ft_init_textures(t_game *game)
+{
+	int		i;
+
+	i = 0;
+	while (i < 3)
+	{
+		if (i == 0)
+		game->img->addr = mlx_get_data_addr(game->img->wall_no,
+			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
+		else if (i == 1)
+			game->img->addr = mlx_get_data_addr(game->img->wall_so,
+			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
+		else if (i == 2)
+			game->img->addr = mlx_get_data_addr(game->img->wall_we,
+			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
+		else if (i == 3)
+			game->img->addr = mlx_get_data_addr(game->img->wall_ea,
+			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
+		if (game->img->addr == NULL)
+			ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", mlx);
+		ft_get_wall_pixels(game->img, i);
+		free(game->img->addr);
+		game->img->addr = NULL;
+		i++;
 	}
 }
 
@@ -69,5 +97,6 @@ static void	ft_record_types(t_game *game)
 void	ft_record(t_game *game)
 {
 	ft_record_types(game);
+	ft_init_textures(game);
 	ft_record_color(game);
 }

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 16:34:29 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/17 21:12:18 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <math.h>
-# include "minilibx/mlx.h"
+# include "minilibxo/mlx.h"
 # include "libft/libft.h"
 # define RED "\033[31m"
 # define GRE "\033[32m"
@@ -60,18 +60,23 @@ typedef struct s_player_position
 
 typedef struct s_img
 {
+	int		endian;
 	int 	floor[3];
 	int 	ceiling[3];
 	int		line_length;
 	int		bits_per_pixel;
-	int		endian;
+	int		east_wall[IMG][IMG];
+	int		west_wall[IMG][IMG];
+	int		north_wall[IMG][IMG];
+	int		south_wall[IMG][IMG];
 	char	*addr;
+	void	*ptr;
+	void	*wall;
 	void	*wall_no;
 	void	*wall_so;
 	void	*wall_we;
 	void	*wall_ea;
-	void	*wall;
-	void	*ptr;
+	void	*shotgun;
 }	t_img;
 
 typedef struct s_map
@@ -97,6 +102,10 @@ typedef struct s_game
 	t_map	*colors;
 	t_pp	*player;
 }	t_game;
+
+//textures
+void	ft_get_wall_pixels(t_img *img, int type);
+int		my_mlx_pixel_get(t_img *img, int x, int y);
 //init_game
 void	ft_init_game(t_game *game);
 //init_struckt

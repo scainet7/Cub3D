@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:06:47 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 17:36:37 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/17 20:08:43 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ void	ft_init_game(t_game *game)
 	game->win = mlx_new_window(game->mlx, WIDTH, HEIGHT, "CUB3D");
 	if (game->win == NULL)
 		ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", leave);
-//	game->img->ptr = mlx_new_image(game->mlx, WIDTH, HEIGHT);
-//	if (game->img->ptr == NULL)
-//		ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", leave);
-	ft_record(game);;
+	game->img->ptr = mlx_new_image(game->mlx, WIDTH, HEIGHT);
+	if (game->img->ptr == NULL)
+		ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", leave);
+	ft_record(game);
+	game->img->addr = mlx_get_data_addr(game->img->ptr,
+		&game->img->bits_per_pixel, &game->img->line_length,&game->img->endian);
 }
 

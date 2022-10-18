@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:17:03 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 20:02:52 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/18 17:06:18 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,34 @@ void	show_struct_pp(t_pp *player)
 
 void	show_struct_img(t_img *img)
 {
+//	int i;
+//	int j;
+//
+//	i = 0;
 	printf(BLU"img_struct\n"END);
 	printf(BLU"%d\n"END, img->endian);
 	printf(BLU"%d\n"END, img->line_length);
+	printf(BLU"%d\n"END, img->bits_per_pixel);
 	printf(BLU"floor[%d, %d, %d]\n"END, img->floor[0], img->floor[1], img->floor[2]);
 	printf(BLU"ceiling[%d, %d, %d]\n"END, img->ceiling[0], img->ceiling[1], img->ceiling[2]);
+//	while (i < IMG)
+//	{
+//		j = 0;
+//		while (j < IMG)
+//		{
+//			printf(BLU"%d\n"END, img->east_wall[i][j]);
+//			printf(BLU"%d\n"END, img->west_wall[i][j]);
+//			printf(BLU"%d\n"END, img->north_wall[i][j]);
+//			printf(BLU"%d\n"END, img->south_wall[i][j]);
+//			j++;
+//		}
+//		i++;
+//	}
+}
+
+void	show_struct_wall(t_wall *wall)
+{
+	printf(MAG"wall_struct\n"END);
+	printf(MAG"%d\n"END, wall->top);
+	printf(MAG"%d\n"END, wall->bottom);
 }

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:06:47 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 20:08:43 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:47:36 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ void	ft_init_game(t_game *game)
 	if (game->img->ptr == NULL)
 		ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", leave);
 	ft_record(game);
-	game->img->addr = mlx_get_data_addr(game->img->ptr,
+	printf("21\n");
+	game->img->mlx_addr = mlx_get_data_addr(game->img->ptr,
 		&game->img->bits_per_pixel, &game->img->line_length,&game->img->endian);
+	if (game->img->mlx_addr == NULL)
+		ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", leave);
 }
 

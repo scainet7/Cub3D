@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 20:30:01 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:46:35 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void ft_init_textures(t_game *game)
 	while (i < 3)
 	{
 		if (i == 0)
-		game->img->addr = mlx_get_data_addr(game->img->wall_no,
+			game->img->addr = mlx_get_data_addr(game->img->wall_no,
 			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
 		else if (i == 1)
 			game->img->addr = mlx_get_data_addr(game->img->wall_so,
@@ -57,7 +57,7 @@ static void ft_init_textures(t_game *game)
 		else if (i == 3)
 			game->img->addr = mlx_get_data_addr(game->img->wall_ea,
 			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		if (game->img->addr == NULL)
+		else if (game->img->addr == NULL)
 			ft_error_handler(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", mlx);
 		ft_get_wall_pixels(game->img, i);
 		free(game->img->addr);
@@ -81,13 +81,13 @@ static void	ft_record_types(t_game *game)
 		if (!ft_strncmp(types_line[0], "NO", 2))
 			game->img->wall_no = mlx_xpm_file_to_image(
 					game->mlx, &types_line[1][2], &x, &y);
-		if (!ft_strncmp(types_line[0], "SO", 2))
+		else if (!ft_strncmp(types_line[0], "SO", 2))
 			game->img->wall_so = mlx_xpm_file_to_image(
 					game->mlx, &types_line[1][2], &x, &y);
-		if (!ft_strncmp(types_line[0], "WE", 2))
+		else if (!ft_strncmp(types_line[0], "WE", 2))
 			game->img->wall_we = mlx_xpm_file_to_image(
 					game->mlx, &types_line[1][2], &x, &y);
-		if (!ft_strncmp(types_line[0], "EA", 2))
+		else if (!ft_strncmp(types_line[0], "EA", 2))
 			game->img->wall_ea = mlx_xpm_file_to_image(
 					game->mlx, &types_line[1][2], &x, &y);
 		types = types->next;

@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/10/17 19:46:02 by snino            ###   ########.fr        #
+#    Updated: 2022/10/18 19:45:10 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,14 +25,20 @@ LIB_mlx			:= -L ./minilibxo -lmlx -framework OpenGL -framework AppKit
 OBJ_DIR			:=	obj
 
 SRCS 			:=	cub3D.c\
+					ft_key.c\
+					ft_move.c\
 					ft_record.c\
+					ft_raycast.c\
 					ft_pars_map.c\
 					ft_init_game.c\
 					ft_check_map.c\
 					ft_free_game.c\
 					ft_draw_game.c\
+					ft_move_utils.c\
+					ft_utils_wall.c\
 					ft_utils_show.c\
 					ft_utils_show2.c\
+					ft_move_utils2.c\
 					ft_close_window.c\
 					ft_init_structs.c\
 					ft_error_handler.c\

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:04:22 by snino             #+#    #+#             */
-/*   Updated: 2022/10/17 18:43:07 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/19 18:47:10 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static void	ft_north(t_game *game, int x, int y)
 	game->player->plane_y = FOV;
 	game->player->dir_x = -1;
 	game->player->dir_y = 0;
+	game->map[game->player->x][game->player->y] = '0';
 }
 
 static void	ft_south(t_game *game, int x, int y)
@@ -34,6 +35,7 @@ static void	ft_south(t_game *game, int x, int y)
 	game->player->plane_y = -FOV;
 	game->player->dir_x = 1;
 	game->player->dir_y = 0;
+	game->map[game->player->x][game->player->y] = '0';
 }
 
 static void	ft_west(t_game *game, int x, int y)
@@ -46,6 +48,7 @@ static void	ft_west(t_game *game, int x, int y)
 	game->player->plane_y = 0;
 	game->player->dir_x = 0;
 	game->player->dir_y = -1;
+	game->map[game->player->x][game->player->y] = '0';
 }
 
 static void	ft_east(t_game *game, int x, int y)
@@ -58,6 +61,7 @@ static void	ft_east(t_game *game, int x, int y)
 	game->player->plane_y = 0;
 	game->player->dir_x = 0;
 	game->player->dir_y = 1;
+	game->map[game->player->x][game->player->y] = '0';
 }
 
 void	ft_player_position(t_game *game)

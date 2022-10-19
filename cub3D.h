@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/18 20:14:09 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/19 20:16:37 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@
 # define SPEED			0.03
 # define ROTATE_SPEED	-0.03
 # define FOV			0.66
-# define IMG			64
+# define IMG			1024
 # define WALL_DISTANCE 	0.3
 # define CORNER			0.25
 
@@ -51,15 +51,15 @@ enum e_exit
 	clean,
 	mlx,
 	map,
-	memory
+	memory,
 };
 
 enum e_tex
 {
 	north = 0,
-	east = 1,
+	east = 3,
 	west = 2,
-	south = 3,
+	south = 1,
 };
 
 typedef struct s_controls
@@ -133,6 +133,7 @@ typedef struct s_img
 	void	*wall_so;
 	void	*wall_we;
 	void	*wall_ea;
+	void	*wall_ra;
 	void	*shotgun;
 }	t_img;
 

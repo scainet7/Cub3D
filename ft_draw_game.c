@@ -65,8 +65,6 @@ int	ft_draw_game(t_game *game)
 		ft_draw_walls(game, x);
 		draw_ceiling(game, x, game->wall->top);
 		draw_floor(game, x, game->wall->bottom);
-//		if (data->door.door)
-//			draw_doors(data, x);
 		x++;
 	}
 //	draw_minimap(data);

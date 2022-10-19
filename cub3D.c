@@ -47,15 +47,6 @@ int	main(int argc, char **argv)
 	mlx_loop_hook(game.mlx, ft_draw_game, &game);
 	mlx_hook(game.win, 2, 1L << 0, key_press, &game);
 	mlx_hook(game.win, 3, 1L << 0, key_release, &game);
-//	show(game.color_list, "color_list");
-//	show(game.map_list, "map_list");
-//	show1(game.types, "TUPE");
-//	show1(game.colors, "COLOR");
-//	show2(game.map, "MAP");
-//	show_struct_game(&game);
-//	show_struct_pp(game.player);
-//	show_struct_img(game.img);
-//	show_struct_wall(game.wall);
 	mlx_hook(game.win, 17, 1L << 17, exit_game, &game);
 	mlx_loop(game.mlx);
 	return (0);

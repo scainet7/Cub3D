@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:36:53 by snino             #+#    #+#             */
-/*   Updated: 2022/10/18 20:57:30 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/19 17:53:32 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,6 @@ double 	ft_get_perp_wall_dist(t_game *game)
 	return (perp_wall_dist);
 }
 
-static bool	is_wall(t_game *game, int x, int y, int p_x)
-{
-	int	i;
-
-	i = p_x;
-	i++;
-	if (game->map[x][y] != '0')
-		return (true);
-	return (false);
-}
-
 void	ft_searching_wall(t_game *game)
 {
 	int	wall;
@@ -67,7 +56,8 @@ void	ft_searching_wall(t_game *game)
 			y += game->ray->step_y;
 			game->ray->side = 1;
 		}
-		wall = is_wall(game, x, y, p_x);
+		if (game->map[x][y] != '0')
+			wall = true;
 	}
 }
 

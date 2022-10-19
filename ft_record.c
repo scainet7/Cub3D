@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/18 18:46:35 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/19 19:05:43 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,18 @@ static void ft_init_textures(t_game *game)
 	int		i;
 
 	i = 0;
-	while (i < 3)
+	while (i < 4)
 	{
-		if (i == 0)
+		if (i == north)
 			game->img->addr = mlx_get_data_addr(game->img->wall_no,
 			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (i == 1)
+		else if (i == south)
 			game->img->addr = mlx_get_data_addr(game->img->wall_so,
 			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (i == 2)
+		else if (i == west)
 			game->img->addr = mlx_get_data_addr(game->img->wall_we,
 			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (i == 3)
+		else if (i == east)
 			game->img->addr = mlx_get_data_addr(game->img->wall_ea,
 			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
 		else if (game->img->addr == NULL)
@@ -70,26 +70,23 @@ static void	ft_record_types(t_game *game)
 {
 	int 	x;
 	int 	y;
-	char	**types_line;
 	t_map 	*types;
 
 	types = game->types;
-	types_line = NULL;
 	while (types)
 	{
-		types_line = types->maps_line;
-		if (!ft_strncmp(types_line[0], "NO", 2))
+		if (!ft_strncmp(types->maps_line[0], "NO", 2))
 			game->img->wall_no = mlx_xpm_file_to_image(
-					game->mlx, &types_line[1][2], &x, &y);
-		else if (!ft_strncmp(types_line[0], "SO", 2))
+					game->mlx, &types->maps_line[1][2], &x, &y);
+		else if (!ft_strncmp(types->maps_line[0], "SO", 2))
 			game->img->wall_so = mlx_xpm_file_to_image(
-					game->mlx, &types_line[1][2], &x, &y);
-		else if (!ft_strncmp(types_line[0], "WE", 2))
+					game->mlx, &types->maps_line[1][2], &x, &y);
+		else if (!ft_strncmp(types->maps_line[0], "WE", 2))
 			game->img->wall_we = mlx_xpm_file_to_image(
-					game->mlx, &types_line[1][2], &x, &y);
-		else if (!ft_strncmp(types_line[0], "EA", 2))
+					game->mlx, &types->maps_line[1][2], &x, &y);
+		else if (!ft_strncmp(types->maps_line[0], "EA", 2))
 			game->img->wall_ea = mlx_xpm_file_to_image(
-					game->mlx, &types_line[1][2], &x, &y);
+					game->mlx, &types->maps_line[1][2], &x, &y);
 		types = types->next;
 	}
 }

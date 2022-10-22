@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/19 20:16:37 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/22 19:37:38 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdbool.h>
-# include "minilibxo/mlx.h"
+# include "minilibx/mlx.h"
 # include "libft/libft.h"
 
 # define RED "\033[31m"
@@ -45,21 +45,12 @@
 # define ROTATE_RIGHT 	124
 # define ESCAPE 		53
 
-enum e_exit
-{
-	leave,
-	clean,
-	mlx,
-	map,
-	memory,
-};
-
 enum e_tex
 {
-	north = 0,
-	east = 3,
-	west = 2,
-	south = 1,
+	north	= 0,
+	south	= 1,
+	west	= 2,
+	east	= 3,
 };
 
 typedef struct s_controls
@@ -215,12 +206,7 @@ int		ft_draw_game(t_game *game);
 void	ft_record(t_game *game);
 void	ft_player_position(t_game *game);
 //close_&_free
-int		ft_close_window(t_game *game);
-void	ft_free_map(t_game *game);
-void	ft_free_mass(t_map *line);
-void	ft_free_game(t_game *game);
-void	ft_free_map_game(t_game *game);
-void	ft_error_handler(t_game *game, char *str, int sweep);
+int		ft_exit_game(t_game *game, char *str, int exit_state);
 //show
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);

@@ -6,76 +6,86 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/10/18 19:45:10 by snino            ###   ########.fr        #
+#    Updated: 2022/10/22 21:29:30 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 			:= cub3D
 
-CC 				:= gcc
+CC 				:=	gcc
 
-HEADER 			:= cub3D.h
+CFLAGS 			:=	-Wall -Wextra -Werror -Imlx -g
 
-CFLAGS 			:= -Wall -Wextra -Werror -Imlx -g
+LIBFT_A			:=	libft.a
 
-LIB				:=	libft/
+LIBF_DIR		:=	libft/
 
-LIB_mlx			:= -L ./minilibxo -lmlx -framework OpenGL -framework AppKit
+LIBFT			:=	$(addprefix $(LIBF_DIR), $(LIBFT_A))
 
-OBJ_DIR			:=	obj
+LIB_mlx			:=	-L ./minilibx -lmlx -framework OpenGL -framework AppKit
 
 SRCS 			:=	cub3D.c\
+					$(addprefix Draw/,\
 					ft_key.c\
 					ft_move.c\
 					ft_record.c\
 					ft_raycast.c\
-					ft_pars_map.c\
 					ft_init_game.c\
-					ft_check_map.c\
-					ft_free_game.c\
 					ft_draw_game.c\
-					ft_move_utils.c\
 					ft_utils_wall.c\
-					ft_utils_show.c\
-					ft_utils_show2.c\
-					ft_move_utils2.c\
-					ft_close_window.c\
+                    ft_move_utils.c\
+                    ft_move_utils2.c\
+					ft_utils_textures.c)\
+					$(addprefix Valid_and_pars/,\
+					ft_pars_map.c\
+					ft_check_map.c\
 					ft_init_structs.c\
-					ft_error_handler.c\
-                    ft_free_map_game.c\
 					ft_pars_map_mass.c\
-					ft_utils_textures.c\
 					ft_pars_map_mass2.c\
                     ft_utils_pars_map.c\
-					ft_pars_color_mass.c\
-					ft_check_type_mass.c\
-					ft_player_position.c\
-					ft_utils_pars_map_mass.c\
+                    ft_pars_color_mass.c\
+                    ft_check_type_mass.c\
+                    ft_player_position.c\
+                    ft_utils_pars_map_mass.c)\
+                    $(addprefix Error_and_show/,\
+					ft_exit_game.c\
+					ft_utils_show.c\
+					ft_utils_show2.c)\
 
-OBJ 			:=	$(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(SRCS)))
+HEADER 			:=	cub3D.h
 
-.PHONY			:	all clean makelibft fclean re
+HEADER_B		:=	cub3D_bonus.h
 
-all				:	makelibft $(NAME)
+OBJ 			:=	$(SRCS:%.c=%.o)
 
-makelibft		:
-					@make -C $(LIB) all
+BONUS_OBJ 		:=	$(BONUS_SRCS:%.c=%.o)
+
+.PHONY			:	all clean fclean re bonus
+
+all				:	$(NAME)
+
+bonus 			:
+					$(B_NAME)
 
 $(NAME)			:	$(HEADER) $(OBJ)
-					$(MAKE) -C ./minilibxo
-					$(CC) $(CFLAGS) $(OBJ) $(LIB_mlx) $(LIB)libft.a -o $(NAME)
+					@make -C $(LIBF_DIR)
+					$(MAKE) -C ./minilibx
+					$(CC) $(CFLAGS)  $(OBJ) $(LIB_mlx) $(LIBFT) -o $(NAME)
 
-$(OBJ_DIR)/%.o	:	%.c	$(HEADER)
-					@mkdir -p $(OBJ_DIR)
-					$(CC) $(CFLAGS) $(LIB_mlx) -c $< -o $@ -I .
+$(B_NAME) 		:	$(HEADER_B) $(BONUS_OBJ)
+					@make -C $(LIBF_DIR)
+					$(MAKE) -C ./minilibx
+					$(CC) $(CFLAGS)  $(BONUS_OBJ) $(LIB_mlx) $(LIBFT) -o $(B_NAME)
 
 clean			:
-					@rm -rf $(OBJ_DIR)
-					@make -C $(LIB) clean
+					@rm -rf $(OBJ)
+					@rm -rf $(BONUS_OBJ)
+					@make -C $(LIBF_DIR) clean
 
 fclean			:	clean
-					$(MAKE) -C ./minilibxo clean
+					$(MAKE) -C ./minilibx clean
 					@$(RM) $(NAME)
-					@make -C $(LIB) fclean
+					@$(RM) $(B_NAME)
+					@make -C $(LIBF_DIR) fclean
 
 re				:	fclean all

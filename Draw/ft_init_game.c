@@ -17,7 +17,7 @@ void	ft_init_game(t_game *game)
 	game->mlx = mlx_init();
 	if (game->mlx == NULL)
 		ft_exit_game(game, "Error\nMLX_INIT", EXIT_FAILURE);
-	game->win = mlx_new_window(game->mlx, WIDTH, HEIGHT, "CUB3D");
+	game->win = mlx_new_window(game->mlx, WIDTH, HEIGHT, "cub3D");
 	if (game->win == NULL)
 		ft_exit_game(game, "Error\nWIN_INIT", EXIT_FAILURE);
 	game->img->ptr = mlx_new_image(game->mlx, WIDTH, HEIGHT);

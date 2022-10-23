@@ -81,7 +81,7 @@ void	redrawing(t_game *game, int keycode)
 
 	len = sqrt(game->player->dir_x * game->player->dir_x + game->player->dir_y * game->player->dir_y);
 	if (keycode == ESCAPE)
-		ft_exit_game(game, GRE"GOOD\n"END,EXIT_SUCCESS);
+		ft_exit_game(game, YEL"Exit_Game"END,EXIT_SUCCESS);
 	if (keycode == MOVE_RIGHT)
 	{
 		if (wall_right_x(game, len) == false)

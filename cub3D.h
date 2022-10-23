@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/22 19:37:38 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 10:36:37 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@
 # define BLU "\033[34m"
 # define MAG "\033[35m"
 # define END "\033[0m"
-# define WIDTH			1024
-# define HEIGHT			512
+# define WIDTH			2048
+# define HEIGHT			1024
 # define SPEED			0.03
 # define ROTATE_SPEED	-0.03
 # define FOV			0.66

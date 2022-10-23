@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/10/22 21:29:30 by snino            ###   ########.fr        #
+#    Updated: 2022/10/23 11:55:19 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ LIBFT			:=	$(addprefix $(LIBF_DIR), $(LIBFT_A))
 LIB_mlx			:=	-L ./minilibx -lmlx -framework OpenGL -framework AppKit
 
 SRCS 			:=	cub3D.c\
-					$(addprefix Draw/,\
+					$(addprefix srcs/,\
+					$(addprefix Draw_and_move/,\
 					ft_key.c\
 					ft_move.c\
 					ft_record.c\
@@ -50,7 +51,7 @@ SRCS 			:=	cub3D.c\
                     $(addprefix Error_and_show/,\
 					ft_exit_game.c\
 					ft_utils_show.c\
-					ft_utils_show2.c)\
+					ft_utils_show2.c))\
 
 HEADER 			:=	cub3D.h
 

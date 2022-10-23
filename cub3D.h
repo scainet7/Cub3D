@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:36:37 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 12:06:57 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@
 # define BLU "\033[34m"
 # define MAG "\033[35m"
 # define END "\033[0m"
-# define WIDTH			2048
-# define HEIGHT			1024
+# define WIDTH			2560
+# define HEIGHT			1440
 # define SPEED			0.03
 # define ROTATE_SPEED	-0.03
 # define FOV			0.66
@@ -85,7 +85,6 @@ typedef struct s_wall
 	double	step;
 	double	position;
 	int		direction;
-	char	type;
 	int		vertical;
 	int		horizontal;
 }	t_wall;
@@ -119,13 +118,10 @@ typedef struct s_img
 	char	*addr;
 	char	*mlx_addr;
 	void	*ptr;
-	void	*wall;
 	void	*wall_no;
 	void	*wall_so;
 	void	*wall_we;
 	void	*wall_ea;
-	void	*wall_ra;
-	void	*shotgun;
 }	t_img;
 
 typedef struct s_map
@@ -155,37 +151,38 @@ typedef struct s_game
 	t_controls	controls;
 }	t_game;
 
-
-int	exit_game(t_game *game, int exit_state);
 //control
-
-int	wall_left_x(t_game *game, double len);
-int	wall_left_y(t_game *game, double len);
-int	wall_right_x(t_game *game, double len);
-int	wall_right_y(t_game *game, double len);
-int	wall_behind_x(t_game *game, double len);
-int	wall_behind_y(t_game *game, double len);
-int	wall_in_front_x(t_game *game, double len);
-int	wall_in_front_y(t_game *game, double len);
-void	redrawing(t_game *game, int keycode);
+int		key_release(int key, t_game *game);
+int		key_press(int keycode, t_game *game);
+int		wall_left_x(t_game *game, double len);
+int		wall_left_y(t_game *game, double len);
+int		wall_right_x(t_game *game, double len);
+int		wall_right_y(t_game *game, double len);
+int		wall_behind_x(t_game *game, double len);
+int		wall_behind_y(t_game *game, double len);
+int		wall_in_front_x(t_game *game, double len);
+int		wall_in_front_y(t_game *game, double len);
 void	check_events(t_game *game);
-int	key_press(int keycode, t_game *game);
-int	key_release(int key, t_game *game);
+void	redrawing(t_game *game, int keycode);
+
 //raycast
 double 	ft_get_perp_wall_dist(t_game *game);
 void	ft_raycast(t_game *game, int x);
 void	ft_searching_wall(t_game *game);
 void	ft_draw_walls(t_game *game, int x);
-//void	ft_set_direction(t_game *game);
+
 //textures
 int		create_rgb(int r, int g, int b);
 int		my_mlx_pixel_get(t_img *img, int x, int y);
 void	my_mlx_pixel_put(t_img *img, int x, int y, int color);
 void	ft_get_wall_pixels(t_img *img, int type);
+
 //init_game
 void	ft_init_game(t_game *game);
+
 //init_struckt
 void	ft_init_struckt(t_game *game);
+
 //pars
 int		ft_memory_num(t_list *list);
 int		ft_memory_num1(t_list *list);
@@ -201,12 +198,15 @@ void	ft_pars_map_list(t_game *game, char *line);
 void	ft_check_map_mass_angle(t_game *game, int n);
 void	ft_check_map(t_game *game, int argc, char **argv);
 t_map	*ft_line_new(void *line);
+
 //draft
 int		ft_draw_game(t_game *game);
 void	ft_record(t_game *game);
 void	ft_player_position(t_game *game);
+
 //close_&_free
 int		ft_exit_game(t_game *game, char *str, int exit_state);
+
 //show
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);

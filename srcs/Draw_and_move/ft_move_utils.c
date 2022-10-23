@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:44:15 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:00 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:35:57 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ int	wall_in_front_x(t_game *game, double len)
 	int			y;
 
 	if (game->player->dir_x > 0)
-		y = (int)((game->player->p_x + (game->player->dir_x) / len * SPEED) + WALL_DISTANCE);
+		y = (int)((game->player->p_x + (game->player->dir_x)
+					/ len * SPEED) + WALL_DISTANCE);
 	else
-		y = (int)((game->player->p_x + (game->player->dir_x) / len * SPEED) - WALL_DISTANCE);
+		y = (int)((game->player->p_x + (game->player->dir_x)
+					/ len * SPEED) - WALL_DISTANCE);
 	x = (int)(game->player->p_y);
 	if (game->map[y][x] == '0')
 		return (false);
@@ -33,9 +35,11 @@ int	wall_behind_x(t_game *game, double len)
 	int		y;
 
 	if (game->player->dir_x > 0)
-		y = (int)((game->player->p_x - (game->player->dir_x) / len * SPEED) - WALL_DISTANCE);
+		y = (int)((game->player->p_x - (game->player->dir_x)
+					/ len * SPEED) - WALL_DISTANCE);
 	else
-		y = (int)((game->player->p_x - (game->player->dir_x) / len * SPEED) + WALL_DISTANCE);
+		y = (int)((game->player->p_x - (game->player->dir_x)
+					/ len * SPEED) + WALL_DISTANCE);
 	x = (int)(game->player->p_y);
 	if (game->map[y][x] == '0')
 		return (false);
@@ -71,4 +75,3 @@ int	wall_right_x(t_game *game, double len)
 		return (false);
 	return (true);
 }
-

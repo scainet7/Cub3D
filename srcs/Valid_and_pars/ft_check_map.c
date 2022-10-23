@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 16:16:28 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:01 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 12:13:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ static void	ft_read_map(t_game *game)
 
 static void	ft_check_name_map(t_game *game, int argc, char **argv)
 {
-	size_t res;
-	char *serch;
+	size_t	res;
+	char	*serch;
 
 	serch = ".cub";
 	if (argc == 2)

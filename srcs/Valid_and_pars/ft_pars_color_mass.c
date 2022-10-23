@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:31:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:01 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 12:13:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ static void	ft_check_color_num(t_game *game)
 			j = -1;
 			while (mass_color->maps_line[i][++j])
 				if (!ft_isdigit(mass_color->maps_line[i][j]))
-					ft_exit_game(game, "Error\nERROR_COLOR_RGB_NUM", EXIT_FAILURE);
+					ft_exit_game(game,
+						"Error\nERROR_COLOR_RGB_NUM", EXIT_FAILURE);
 			num = ft_atoi(mass_color->maps_line[i]);
 			if (num < 0 || num > 255)
 				ft_exit_game(game, "Error\nERROR_COLOR_RGB_NUM", EXIT_FAILURE);

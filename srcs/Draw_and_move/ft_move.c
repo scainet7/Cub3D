@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:36:51 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:00 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:34:02 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ static void	rotation_left(int keycode, t_game *game, double len)
 	{
 		old_dir = game->player->dir_x;
 		game->player->dir_x = cos(-ROTATE_SPEED) * game->player->dir_x
-					  - sin(-ROTATE_SPEED) * game->player->dir_y;
+			- sin(-ROTATE_SPEED) * game->player->dir_y;
 		game->player->dir_y = sin(-ROTATE_SPEED) * old_dir
-					  + cos(-ROTATE_SPEED) * game->player->dir_y;
+			+ cos(-ROTATE_SPEED) * game->player->dir_y;
 		old_plane = game->player->plane_x;
 		game->player->plane_x = cos(-ROTATE_SPEED) * game->player->plane_x
-						- sin(-ROTATE_SPEED) * game->player->plane_y;
+			- sin(-ROTATE_SPEED) * game->player->plane_y;
 		game->player->plane_y = sin(-ROTATE_SPEED) * old_plane
-						+ cos(-ROTATE_SPEED) * game->player->plane_y;
+			+ cos(-ROTATE_SPEED) * game->player->plane_y;
 		game->player->dir_x /= len;
 		game->player->dir_y /= len;
 	}
@@ -61,14 +61,14 @@ static void	rotation(int keycode, t_game *game, double len)
 	{
 		old_dir = game->player->dir_x;
 		game->player->dir_x = cos(ROTATE_SPEED) * game->player->dir_x
-					  - sin(ROTATE_SPEED) * game->player->dir_y;
+			- sin(ROTATE_SPEED) * game->player->dir_y;
 		game->player->dir_y = sin(ROTATE_SPEED) * old_dir
-					  + cos(ROTATE_SPEED) * game->player->dir_y;
+			+ cos(ROTATE_SPEED) * game->player->dir_y;
 		old_plane = game->player->plane_x;
 		game->player->plane_x = cos(ROTATE_SPEED) * game->player->plane_x
-						- sin(ROTATE_SPEED) * game->player->plane_y;
+			- sin(ROTATE_SPEED) * game->player->plane_y;
 		game->player->plane_y = sin(ROTATE_SPEED) * old_plane
-						+ cos(ROTATE_SPEED) * game->player->plane_y;
+			+ cos(ROTATE_SPEED) * game->player->plane_y;
 		game->player->dir_x /= len;
 		game->player->dir_y /= len;
 	}
@@ -79,9 +79,10 @@ void	redrawing(t_game *game, int keycode)
 {
 	double	len;
 
-	len = sqrt(game->player->dir_x * game->player->dir_x + game->player->dir_y * game->player->dir_y);
+	len = sqrt(game->player->dir_x * game->player->dir_x
+			+ game->player->dir_y * game->player->dir_y);
 	if (keycode == ESCAPE)
-		ft_exit_game(game, YEL"Exit_Game"END,EXIT_SUCCESS);
+		ft_exit_game(game, YEL"Exit_Game"END, EXIT_SUCCESS);
 	if (keycode == MOVE_RIGHT)
 	{
 		if (wall_right_x(game, len) == false)
@@ -99,4 +100,3 @@ void	redrawing(t_game *game, int keycode)
 	moving_straight(keycode, game, len);
 	rotation(keycode, game, len);
 }
-

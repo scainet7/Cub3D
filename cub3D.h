@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 12:06:57 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:44:46 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,31 +66,34 @@ typedef struct s_controls
 
 typedef struct s_player_position
 {
-	int 		x;
-	int 		y;
+	int			x;
+	int			y;
 	float		p_x;
 	float		p_y;
-	double		plane_x;
-	double		plane_y;
 	double		dir_x;
 	double		dir_y;
+	double		plane_x;
+	double		plane_y;
+	char		sumb;
 }	t_pp;
 
 typedef struct s_wall
 {
-
-	int		bottom;
-	int		top;
-	int		x;
+	int		end;
+	int		start;
+	int		tex_x;
+	int		vertical;
+	int		direction;
+	int		horizontal;
 	double	step;
 	double	position;
-	int		direction;
-	int		vertical;
-	int		horizontal;
 }	t_wall;
 
 typedef struct s_raycast
 {
+	int		side;
+	int		step_x;
+	int		step_y;
 	float	camera;
 	double	dir_x;
 	double	dir_y;
@@ -98,17 +101,14 @@ typedef struct s_raycast
 	double	delta_y;
 	double	side_dist_x;
 	double	side_dist_y;
-	int		step_x;
-	int		step_y;
-	int		side;
 	double	perp_wall_dist;
 }	t_ray;
 
 typedef struct s_img
 {
 	int		endian;
-	int 	floor[3];
-	int 	ceiling[3];
+	int		floor[3];
+	int		ceiling[3];
 	int		line_length;
 	int		bits_per_pixel;
 	int		east_wall[IMG][IMG];
@@ -132,22 +132,25 @@ typedef struct s_map
 
 typedef struct s_game
 {
-	int		type;
-	int		color;
-	int		enter;
-	void	*mlx;
-	void	*win;
-	char	*map_name;
-	char	**map;
-	t_pp	*player;
-	t_img 	*img;
-	t_ray	*ray;
-	t_map	*types;
-	t_map	*colors;
-	t_wall	*wall;
-	t_list	*type_list;
-	t_list	*color_list;
-	t_list	*map_list;
+	int			flag;
+	int			type;
+	int			color;
+	int			enter;
+	int			width;
+	int 		height;
+	void		*mlx;
+	void		*win;
+	char		*map_name;
+	char		**map;
+	t_pp		*player;
+	t_img		*img;
+	t_ray		*ray;
+	t_map		*types;
+	t_map		*colors;
+	t_wall		*wall;
+	t_list		*type_list;
+	t_list		*color_list;
+	t_list		*map_list;
 	t_controls	controls;
 }	t_game;
 
@@ -166,9 +169,7 @@ void	check_events(t_game *game);
 void	redrawing(t_game *game, int keycode);
 
 //raycast
-double 	ft_get_perp_wall_dist(t_game *game);
 void	ft_raycast(t_game *game, int x);
-void	ft_searching_wall(t_game *game);
 void	ft_draw_walls(t_game *game, int x);
 
 //textures
@@ -207,6 +208,9 @@ void	ft_player_position(t_game *game);
 //close_&_free
 int		ft_exit_game(t_game *game, char *str, int exit_state);
 
+//bonus
+int	ft_draw_minimap(t_game *game);
+int	get_color(char c);
 //show
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);

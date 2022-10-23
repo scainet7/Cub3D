@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3D.c                                            :+:      :+:    :+:   */
+/*   cub3D_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 15:54:57 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 19:27:17 by snino            ###   ########.fr       */
+/*   Created: 2022/10/23 16:41:09 by snino             #+#    #+#             */
+/*   Updated: 2022/10/23 19:28:28 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	game.flag = 0;
+	game.flag = 1;
 	ft_check_map(&game, argc, argv);
 	ft_init_struckt(&game);
 	ft_player_position(&game);

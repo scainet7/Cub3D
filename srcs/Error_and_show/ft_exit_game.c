@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:28:55 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:01 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 12:13:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../cub3D.h"
 
-static	void ft_free_mass(t_map *line)
+static void	ft_free_mass(t_map *line)
 {
 	t_map	*temp;
 

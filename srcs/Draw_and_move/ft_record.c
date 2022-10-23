@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:00 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:49:45 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_record_color(t_game *game)
 {
-	t_map 	*color;
+	t_map	*color;
 	char	**tmp_color;
 
 	color = game->colors;
@@ -38,27 +38,37 @@ static void	ft_record_color(t_game *game)
 	}
 }
 
-static void ft_init_textures(t_game *game)
+static void	ft_init_textures_next(t_game *game, int i)
+{
+	if (i == north)
+		game->img->addr = mlx_get_data_addr(game->img->wall_no,
+				&game->img->bits_per_pixel, &game->img->line_length,
+				&game->img->endian);
+	else if (i == south)
+		game->img->addr = mlx_get_data_addr(game->img->wall_so,
+				&game->img->bits_per_pixel, &game->img->line_length,
+				&game->img->endian);
+	else if (i == west)
+		game->img->addr = mlx_get_data_addr(game->img->wall_we,
+				&game->img->bits_per_pixel, &game->img->line_length,
+				&game->img->endian);
+	else if (i == east)
+		game->img->addr = mlx_get_data_addr(game->img->wall_ea,
+				&game->img->bits_per_pixel, &game->img->line_length,
+				&game->img->endian);
+}
+
+static void	ft_init_textures(t_game *game)
 {
 	int		i;
 
 	i = 0;
 	while (i < 4)
 	{
-		if (i == north)
-			game->img->addr = mlx_get_data_addr(game->img->wall_no,
-			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (i == south)
-			game->img->addr = mlx_get_data_addr(game->img->wall_so,
-			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (i == west)
-			game->img->addr = mlx_get_data_addr(game->img->wall_we,
-			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (i == east)
-			game->img->addr = mlx_get_data_addr(game->img->wall_ea,
-			&game->img->bits_per_pixel, &game->img->line_length, &game->img->endian);
-		else if (game->img->addr == NULL)
-			ft_exit_game(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", EXIT_FAILURE);
+		ft_init_textures_next(game, i);
+		if (game->img->addr == NULL)
+			ft_exit_game(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION",
+				EXIT_FAILURE);
 		ft_get_wall_pixels(game->img, i);
 		free(game->img->addr);
 		game->img->addr = NULL;
@@ -68,9 +78,9 @@ static void ft_init_textures(t_game *game)
 
 static void	ft_record_types(t_game *game)
 {
-	int 	x;
-	int 	y;
-	t_map 	*types;
+	int		x;
+	int		y;
+	t_map	*types;
 
 	types = game->types;
 	while (types)

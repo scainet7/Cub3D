@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 21:05:17 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 11:21:14 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:30:32 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,13 @@ int	ft_draw_game(t_game *game)
 	{
 		ft_raycast(game, x);
 		ft_draw_walls(game, x);
-		draw_ceiling(game, x, game->wall->top);
-		draw_floor(game, x, game->wall->bottom);
+		draw_ceiling(game, x, game->wall->start);
+		draw_floor(game, x, game->wall->end);
 		x++;
 	}
-//	draw_minimap(game);
+	if (game->flag)
+		ft_draw_minimap(game);
 	mlx_put_image_to_window(game->mlx, game->win,
-							game->img->ptr, 0, 0);
+		game->img->ptr, 0, 0);
 	return (EXIT_SUCCESS);
 }

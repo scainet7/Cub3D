@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:07:23 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 10:41:01 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/23 12:13:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 void	ft_init_struckt(t_game *game)
 {
 	t_pp	*player;
-	t_img 	*img;
+	t_img	*img;
 	t_ray	*ray;
-	t_wall  *wall;
+	t_wall	*wall;
 
 	ft_memset(&(game->controls), -1, sizeof(t_controls));
 	player = malloc(sizeof(t_pp));
 	if (!player)
-		ft_exit_game(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION", EXIT_FAILURE);
+		ft_exit_game(game,
+			"Error\nMALLOC_STRUCKT_PLAYER_POSITION", EXIT_FAILURE);
 	game->player = player;
 	img = malloc(sizeof(t_img));
 	if (!img)
@@ -37,4 +38,3 @@ void	ft_init_struckt(t_game *game)
 		ft_exit_game(game, "Error\nMALLOC_STRUCKT_WALL", EXIT_FAILURE);
 	game->wall = wall;
 }
-

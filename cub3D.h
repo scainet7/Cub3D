@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 18:44:46 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/25 20:40:34 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@
 # define BLU "\033[34m"
 # define MAG "\033[35m"
 # define END "\033[0m"
-# define WIDTH			2560
-# define HEIGHT			1440
+# define WIDTH			2048
+# define HEIGHT			1024
 # define SPEED			0.03
 # define ROTATE_SPEED	-0.03
 # define FOV			0.66
 # define IMG			1024
+# define MIMG			15
+# define PI				3.14159265
 # define WALL_DISTANCE 	0.3
 # define CORNER			0.25
 
@@ -53,6 +55,18 @@ enum e_tex
 	east	= 3,
 };
 
+typedef struct s_door
+{
+	bool	door;
+	int		open_vert[2];
+	int		open_hor[2];
+	double	dir_x;
+	double	dir_y;
+	int		x;
+	int		side;
+	double	perp_wall_dist;
+}	t_door;
+
 typedef struct s_controls
 {
 	int	up;
@@ -70,6 +84,7 @@ typedef struct s_player_position
 	int			y;
 	float		p_x;
 	float		p_y;
+	float 		angle;
 	double		dir_x;
 	double		dir_y;
 	double		plane_x;
@@ -148,6 +163,7 @@ typedef struct s_game
 	t_map		*types;
 	t_map		*colors;
 	t_wall		*wall;
+	t_door 		*door;
 	t_list		*type_list;
 	t_list		*color_list;
 	t_list		*map_list;
@@ -209,8 +225,14 @@ void	ft_player_position(t_game *game);
 int		ft_exit_game(t_game *game, char *str, int exit_state);
 
 //bonus
-int	ft_draw_minimap(t_game *game);
-int	get_color(char c);
+int		get_color(char c);
+int		mouse_hook(int x, int y, t_game *game);
+void	ft_draw_minimap(t_game *game);
+void	ft_pars_map_mass_bonus(t_game *game);
+void	ft_check_map_mass_bonus(t_game *game);
+void	ft_check_map_mass_symb_bonus(t_game *game);
+void	ft_check_map_mass_angle_bonus(t_game *game, int n);
+
 //show
 void	show(t_list *list, char *str);
 void	show1(t_map *maps, char *place);

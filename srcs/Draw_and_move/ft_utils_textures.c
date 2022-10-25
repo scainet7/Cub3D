@@ -6,26 +6,11 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:40:18 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 19:43:39 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/25 15:38:42 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../cub3D.h"
-
-int	get_color(char c)
-{
-	int	color;
-
-	if (c == '0')
-		color = 0x808080;
-	else if (c == '2')
-		color = 0x00FF00;
-	else if (c == '1' || c == '3')
-		color = 0x4b4b4b;
-	else
-		color = 0;
-	return (color);
-}
 
 int	create_rgb(int r, int g, int b)
 {

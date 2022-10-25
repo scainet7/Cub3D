@@ -22,6 +22,7 @@ int	main(int argc, char **argv)
 	ft_player_position(&game);
 	ft_init_game(&game);
 	mlx_loop_hook(game.mlx, ft_draw_game, &game);
+	mlx_hook(game.win, 6, 1L << 0, mouse_hook, &game);
 	mlx_hook(game.win, 2, 1L << 0, key_press, &game);
 	mlx_hook(game.win, 3, 1L << 0, key_release, &game);
 	mlx_hook(game.win, 17, 1L << 17, ft_exit_game, &game);

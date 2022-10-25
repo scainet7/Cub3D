@@ -69,6 +69,14 @@ void	ft_check_map(t_game *game, int argc, char **argv)
 	ft_check_type_mass(game);
 	ft_pars_color_mass(game);
 	ft_check_color_mass(game);
-	ft_pars_map_mass(game);
-	ft_check_map_mass(game);
+	if (game->flag)
+	{
+		ft_pars_map_mass_bonus(game);
+		ft_check_map_mass_bonus(game);
+	}
+	else
+	{
+		ft_pars_map_mass(game);
+		ft_check_map_mass(game);
+	}
 }

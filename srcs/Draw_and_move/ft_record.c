@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 17:49:45 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/26 19:48:50 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ static void	ft_init_textures_next(t_game *game, int i)
 		game->img->addr = mlx_get_data_addr(game->img->wall_ea,
 				&game->img->bits_per_pixel, &game->img->line_length,
 				&game->img->endian);
+	else if (i == door)
+		game->img->addr = mlx_get_data_addr(game->img->door,
+				&game->img->bits_per_pixel, &game->img->line_length,
+				&game->img->endian);
+	else
+		ft_init_textures_next_bonus(game, i);
 }
 
 static void	ft_init_textures(t_game *game)
@@ -63,11 +69,11 @@ static void	ft_init_textures(t_game *game)
 	int		i;
 
 	i = 0;
-	while (i < 4)
+	while (i < 12)
 	{
 		ft_init_textures_next(game, i);
 		if (game->img->addr == NULL)
-			ft_exit_game(game, "Error\nMALLOC_STRUCKT_PLAYER_POSITION",
+			ft_exit_game(game, "Error\nMALLOC_STRUCKT_ADDR_TEXTURE",
 				EXIT_FAILURE);
 		ft_get_wall_pixels(game->img, i);
 		free(game->img->addr);
@@ -99,6 +105,8 @@ static void	ft_record_types(t_game *game)
 					game->mlx, &types->maps_line[1][2], &x, &y);
 		types = types->next;
 	}
+	if (game->flag)
+		ft_record_types_bonus(game, x, y);
 }
 
 void	ft_record(t_game *game)

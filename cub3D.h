@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/25 20:40:34 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/26 19:36:05 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,19 @@ enum e_tex
 	south	= 1,
 	west	= 2,
 	east	= 3,
+	door	= 4,
+	door1	= 5,
+	door2	= 6,
+	door3	= 7,
+	door4	= 8,
+	door5	= 9,
+	door6	= 10,
+	door7	= 11,
 };
 
 typedef struct s_door
 {
+	char	*name;
 	bool	door;
 	int		open_vert[2];
 	int		open_hor[2];
@@ -126,6 +135,14 @@ typedef struct s_img
 	int		ceiling[3];
 	int		line_length;
 	int		bits_per_pixel;
+	int		doors[IMG][IMG];
+	int		doors1[IMG][IMG];
+	int		doors2[IMG][IMG];
+	int		doors3[IMG][IMG];
+	int		doors4[IMG][IMG];
+	int		doors5[IMG][IMG];
+	int		doors6[IMG][IMG];
+	int		doors7[IMG][IMG];
 	int		east_wall[IMG][IMG];
 	int		west_wall[IMG][IMG];
 	int		north_wall[IMG][IMG];
@@ -133,6 +150,16 @@ typedef struct s_img
 	char	*addr;
 	char	*mlx_addr;
 	void	*ptr;
+	void	*door;
+	void	*door1;
+	void	*door2;
+	void	*door3;
+	void	*door4;
+	void	*door5;
+	void	*door6;
+	void	*door7;
+	void	*floors;
+	void	*ceilings;
 	void	*wall_no;
 	void	*wall_so;
 	void	*wall_we;
@@ -185,6 +212,7 @@ void	check_events(t_game *game);
 void	redrawing(t_game *game, int keycode);
 
 //raycast
+double	ft_get_perp_wall_dist(t_game *game);
 void	ft_raycast(t_game *game, int x);
 void	ft_draw_walls(t_game *game, int x);
 
@@ -226,12 +254,21 @@ int		ft_exit_game(t_game *game, char *str, int exit_state);
 
 //bonus
 int		get_color(char c);
+int		open_vert_door(t_game *game);
+int		close_vert_door(t_game *game);
+int		open_horizone_door(t_game *game);
+int		close_horizone_door(t_game *game);
 int		mouse_hook(int x, int y, t_game *game);
+bool	is_wall(t_game *game, int x, int y, int p_x);
 void	ft_draw_minimap(t_game *game);
+void	ft_draw_doors(t_game *game, int x);
 void	ft_pars_map_mass_bonus(t_game *game);
 void	ft_check_map_mass_bonus(t_game *game);
 void	ft_check_map_mass_symb_bonus(t_game *game);
+void	ft_init_textures_next_bonus(t_game *game, int i);
+void	ft_record_types_bonus(t_game *game, int x, int y);
 void	ft_check_map_mass_angle_bonus(t_game *game, int n);
+void	ft_get_wall_pixels_bonus(t_img *img,int type, int i, int j);
 
 //show
 void	show(t_list *list, char *str);

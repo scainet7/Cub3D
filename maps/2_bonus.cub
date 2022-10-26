@@ -1,7 +1,7 @@
-NO ./textures/star_wall1.xpm
-SO ./textures/star_wall2.xpm
-WE ./textures/star_wall3.xpm
-EA ./textures/star_wall4.xpm
+NO ./textures/star_Wall_bonus.xpm
+SO ./textures/star_Wall_bonus.xpm
+WE ./textures/star_Wall_bonus.xpm
+EA ./textures/star_Wall_bonus.xpm
 
 
 C 255,255,255

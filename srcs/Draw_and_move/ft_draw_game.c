@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 21:05:17 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 17:30:32 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/26 18:02:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ int	ft_draw_game(t_game *game)
 		ft_draw_walls(game, x);
 		draw_ceiling(game, x, game->wall->start);
 		draw_floor(game, x, game->wall->end);
+		if (game->door->door)
+			ft_draw_doors(game, x);
 		x++;
 	}
 	if (game->flag)

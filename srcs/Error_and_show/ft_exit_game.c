@@ -36,6 +36,7 @@ int	ft_exit_game(t_game *game, char *str, int exit_state)
 	free(game->img);
 	free(game->ray);
 	free(game->wall);
+	free(game->door);
 	ft_freelst(game->type_list);
 	ft_freelst(game->color_list);
 	ft_freelst(game->map_list);

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:51:02 by snino             #+#    #+#             */
-/*   Updated: 2022/10/25 19:23:23 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/26 16:10:37 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,11 @@ void	ft_draw_minimap(t_game *game)
 		while (++j < game->height)
 		{
 			if ((game->map[j][i]) == '1')
-			{
 				ft_draw_mapi(game, i * MIMG,
 							  j * MIMG, 0x6b6b6b);
-			}
+			if ((game->map[j][i]) == '2')
+				ft_draw_mapi(game, i * MIMG,
+							 j * MIMG, 0xa82323);
 		}
 	}
 	ft_draw_minimap_player(game);

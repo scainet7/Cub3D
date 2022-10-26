@@ -6,13 +6,13 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:21:36 by snino             #+#    #+#             */
-/*   Updated: 2022/10/23 17:42:15 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/26 16:48:15 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../cub3D.h"
 
-static double	ft_get_perp_wall_dist(t_game *game)
+double	ft_get_perp_wall_dist(t_game *game)
 {
 	t_ray	*ray;
 	double	perp_wall_dist;
@@ -33,7 +33,7 @@ static double	ft_get_perp_wall_dist(t_game *game)
 	return (perp_wall_dist);
 }
 
-static void	ft_dda(t_game *game)
+static void	ft_dda(t_game *game, int x)
 {
 	int	wall;
 	int	map_x;
@@ -56,8 +56,7 @@ static void	ft_dda(t_game *game)
 			map_y += game->ray->step_y;
 			game->ray->side = 1;
 		}
-		if (game->map[map_x][map_y] != '0')
-			wall = true;
+		wall = is_wall(game, map_x, map_y, x);
 	}
 }
 
@@ -99,6 +98,7 @@ static void	ft_side_dist_x(t_game *game)
 
 void	ft_raycast(t_game *game, int x)
 {
+	game->door->door = false;
 	game->ray->camera = 2 * x / (double)WIDTH - 1;
 	game->ray->dir_x = game->player->dir_x + game->player->plane_x
 		* game->ray->camera;
@@ -114,6 +114,6 @@ void	ft_raycast(t_game *game, int x)
 		game->ray->delta_y = fabs(1 / game->ray->dir_y);
 	ft_side_dist_x(game);
 	ft_side_dist_y(game);
-	ft_dda(game);
+	ft_dda(game, x);
 	game->ray->perp_wall_dist = ft_get_perp_wall_dist(game);
 }

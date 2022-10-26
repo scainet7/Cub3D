@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:40:18 by snino             #+#    #+#             */
-/*   Updated: 2022/10/25 15:38:42 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/26 19:37:06 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	my_mlx_pixel_put(t_img *img, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-int	my_mlx_pixel_get(t_img *img, int x, int y)
+int	 my_mlx_pixel_get(t_img *img, int x, int y)
 {
 	int		color;
 	char	*dst;
@@ -55,6 +55,10 @@ void	ft_get_wall_pixels(t_img *img, int type)
 				img->west_wall[i][j] = my_mlx_pixel_get(img, i, j);
 			else if (type == east)
 				img->east_wall[i][j] = my_mlx_pixel_get(img, i, j);
+			else if (type == door)
+				img->doors[i][j] = my_mlx_pixel_get(img, i, j);
+			else
+				ft_get_wall_pixels_bonus(img, type, i, j);
 			j++;
 		}
 		i++;

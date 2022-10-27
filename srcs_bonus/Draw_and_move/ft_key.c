@@ -6,11 +6,26 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 20:12:37 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 20:48:15 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/25 20:41:26 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../cub3D.h"
+#include "../../cub3D_bonus.h"
+
+int	mouse_hook(int x, int y, t_game *game)
+{
+	static int	previous;
+	int			current;
+
+	current = x;
+	(void)y;
+	if (current > previous)
+		redrawing(game, ROTATE_RIGHT);
+	else if (current < previous)
+		redrawing(game, ROTATE_LEFT);
+	previous = current;
+	return (EXIT_SUCCESS);
+}
 
 int	key_release(int key, t_game *game)
 {

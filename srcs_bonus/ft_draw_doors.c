@@ -6,11 +6,11 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:26:07 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 12:57:24 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 22:04:24 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3D.h"
+#include "../cub3D_bonus.h"
 
 static void	set_door_data(t_game *game, int x)
 {
@@ -44,17 +44,19 @@ static void	get_door_game(t_game *game)
 	if (game->wall->end >= HEIGHT)
 		game->wall->end = HEIGHT - 1;
 	if (game->door->side == 0)
-		hit_point = game->player->p_y + game->door->perp_wall_dist * game->door->dir_y;
+		hit_point = game->player->p_y + \
+		game->door->perp_wall_dist * game->door->dir_y;
 	else
-		hit_point = game->player->p_x + game->door->perp_wall_dist * game->door->dir_x;
+		hit_point = game->player->p_x + \
+		game->door->perp_wall_dist * game->door->dir_x;
 	hit_point -= floor((hit_point));
 	game->wall->tex_x = (int)(hit_point * (double)(IMG));
 	if ((game->door->side == 0 && game->door->dir_x > 0)
 		|| (game->door->side == 1 && game->door->dir_y < 0))
 		game->wall->tex_x = IMG - game->wall->tex_x - 1;
 	game->wall->step = (1.0 * IMG / line_height);
-	game->wall->position = (game->wall->start - 0 - HEIGHT / 2
-					  + line_height / 2) * game->wall->step;
+	game->wall->position = (game->wall->start - 0 - HEIGHT / 2 + \
+		line_height / 2) * game->wall->step;
 }
 
 void	ft_draw_doors(t_game *game, int x)
@@ -74,4 +76,3 @@ void	ft_draw_doors(t_game *game, int x)
 		y++;
 	}
 }
-

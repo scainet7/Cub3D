@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../cub3D.h"
+#include "../../cub3D_bonus.h"
 
 int	create_rgb(int r, int g, int b)
 {
@@ -55,6 +55,7 @@ void	ft_get_wall_pixels(t_img *img, int type)
 				img->west_wall[i][j] = my_mlx_pixel_get(img, i, j);
 			else if (type == east)
 				img->east_wall[i][j] = my_mlx_pixel_get(img, i, j);
+			ft_get_wall_pixels_bonus(img, type, i, j);
 			j++;
 		}
 		i++;

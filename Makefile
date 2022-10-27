@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/10/27 13:13:52 by snino            ###   ########.fr        #
+#    Updated: 2022/10/27 20:18:29 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,17 +54,9 @@ SRCS 			:=	cub3D.c\
 					ft_exit_game.c\
 					ft_utils_show.c\
 					ft_utils_show2.c))\
-					$(addprefix srcs_bonus/,\
-                    ft_minimap.c\
-                    ft_move_door.c\
-                    ft_draw_doors.c\
-                    ft_draw_bonus.c\
-                    ft_record_types_bonus.c\
-                    ft_pars_map_mass_bonus.c\
-                    ft_pars_map_mass2_bonus.c)\
 
 BONUS_SRCS		:=	cub3D_bonus.c\
-					$(addprefix srcs/,\
+					$(addprefix srcs_bonus/,\
 					$(addprefix Draw_and_move/,\
 					ft_key.c\
 					ft_move.c\
@@ -102,6 +94,8 @@ BONUS_SRCS		:=	cub3D_bonus.c\
 
 HEADER 			:=	cub3D.h
 
+HEADER_B 		:=	cub3D_bonus.h
+
 OBJ 			:=	$(SRCS:%.c=%.o)
 
 BONUS_OBJ 		:=	$(BONUS_SRCS:%.c=%.o)
@@ -117,7 +111,7 @@ $(NAME)			:	$(HEADER) $(OBJ)
 					$(MAKE) -C ./minilibx
 					$(CC) $(CFLAGS)  $(OBJ) $(LIB_mlx) $(LIBFT) -o $(NAME)
 
-$(B_NAME) 		:	$(HEADER) $(BONUS_OBJ)
+$(B_NAME) 		:	$(HEADER_B) $(BONUS_OBJ)
 					@make -C $(LIBF_DIR)
 					$(MAKE) -C ./minilibx
 					$(CC) $(CFLAGS) $(BONUS_OBJ) $(LIB_mlx) $(LIBFT) -o $(B_NAME)

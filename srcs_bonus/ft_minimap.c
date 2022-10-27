@@ -6,16 +6,14 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:51:02 by snino             #+#    #+#             */
-/*   Updated: 2022/10/26 16:10:37 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 22:10:42 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3D.h"
+#include "../cub3D_bonus.h"
 
-static void	ft_draw_minimap_player(t_game *game)
+static void	ft_draw_minimap_player(t_game *game, int i, float j)
 {
-	int		i;
-	float	j;
 	float	x1;
 	float	y1;
 	float	x;
@@ -32,17 +30,17 @@ static void	ft_draw_minimap_player(t_game *game)
 			x1 = j * cos(i * PI / 180);
 			y1 = j * sin(i * PI / 180);
 			my_mlx_pixel_put(game->img, x + x1 + WIDTH \
-			- game->width * MIMG * 1.5, y + y1 + HEIGHT \
-			- game->height * MIMG * 1.5, 0x656ec2);
+				- game->width * MIMG * 1.5, y + y1 + HEIGHT \
+				- game->height * MIMG * 1.5, 0x656ec2);
 		}
 	}
 }
 
-static 	void	ft_draw_mapi(t_game *game, float x, float y, int colour)
+static void	ft_draw_mapi(t_game *game, float x, float y, int colour)
 {
-	float	start_x;
-	int		row_size;
 	int		count;
+	int		row_size;
+	float	start_x;
 
 	count = 0;
 	while (count < MIMG)
@@ -63,12 +61,12 @@ static 	void	ft_draw_mapi(t_game *game, float x, float y, int colour)
 
 static void	ft_max_height_width(t_game *game)
 {
-	int 	y;
-	int 	max_x;
+	int	y;
+	int	max_x;
 
 	y = 0;
 	max_x = 0;
-	while(game->map[y])
+	while (game->map[y])
 	{
 		if (y == 0)
 			max_x = ft_strlen(game->map[y]);
@@ -93,12 +91,12 @@ void	ft_draw_minimap(t_game *game)
 		while (++j < game->height)
 		{
 			if ((game->map[j][i]) == '1')
-				ft_draw_mapi(game, i * MIMG,
-							  j * MIMG, 0x6b6b6b);
+				ft_draw_mapi(game, i * MIMG, \
+				j * MIMG, 0x6b6b6b);
 			if ((game->map[j][i]) == '2')
-				ft_draw_mapi(game, i * MIMG,
-							 j * MIMG, 0xa82323);
+				ft_draw_mapi(game, i * MIMG, \
+				j * MIMG, 0xa82323);
 		}
 	}
-	ft_draw_minimap_player(game);
+	ft_draw_minimap_player(game, i, (float)j);
 }

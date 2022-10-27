@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../cub3D.h"
+#include "../../cub3D_bonus.h"
 
 static void	ft_free_mass(t_map *line)
 {
@@ -36,6 +36,7 @@ int	ft_exit_game(t_game *game, char *str, int exit_state)
 	free(game->img);
 	free(game->ray);
 	free(game->wall);
+	free(game->door);
 	ft_freelst(game->type_list);
 	ft_freelst(game->color_list);
 	ft_freelst(game->map_list);

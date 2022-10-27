@@ -6,14 +6,15 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:04:22 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 21:07:05 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/25 16:40:02 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../cub3D.h"
+#include "../../cub3D_bonus.h"
 
 static void	ft_north(t_game *game, int x, int y)
 {
+	game->player->sumb = 'N';
 	game->player->x = x;
 	game->player->y = y;
 	game->player->p_x = x + 0.5;
@@ -22,11 +23,12 @@ static void	ft_north(t_game *game, int x, int y)
 	game->player->plane_y = FOV;
 	game->player->dir_x = -1;
 	game->player->dir_y = 0;
-	game->map[x][y] = '0';
+	game->map[y][x] = '0';
 }
 
 static void	ft_south(t_game *game, int x, int y)
 {
+	game->player->sumb = 'S';
 	game->player->x = x;
 	game->player->y = y;
 	game->player->p_x = x + 0.5;
@@ -35,11 +37,12 @@ static void	ft_south(t_game *game, int x, int y)
 	game->player->plane_y = -FOV;
 	game->player->dir_x = 1;
 	game->player->dir_y = 0;
-	game->map[x][y] = '0';
+	game->map[y][x] = '0';
 }
 
 static void	ft_west(t_game *game, int x, int y)
 {
+	game->player->sumb = 'W';
 	game->player->x = x;
 	game->player->y = y;
 	game->player->p_x = x + 0.5;
@@ -48,11 +51,12 @@ static void	ft_west(t_game *game, int x, int y)
 	game->player->plane_y = 0;
 	game->player->dir_x = 0;
 	game->player->dir_y = -1;
-	game->map[x][y] = '0';
+	game->map[y][x] = '0';
 }
 
 static void	ft_east(t_game *game, int x, int y)
 {
+	game->player->sumb = 'E';
 	game->player->x = x;
 	game->player->y = y;
 	game->player->p_x = x + 0.5;
@@ -61,7 +65,7 @@ static void	ft_east(t_game *game, int x, int y)
 	game->player->plane_y = 0;
 	game->player->dir_x = 0;
 	game->player->dir_y = 1;
-	game->map[x][y] = '0';
+	game->map[y][x] = '0';
 }
 
 void	ft_player_position(t_game *game)

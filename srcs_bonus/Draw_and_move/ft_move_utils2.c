@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../cub3D.h"
+#include "../../cub3D_bonus.h"
 
 int	wall_in_front_y(t_game *game, double len)
 {
 	int			x;
 	int			y;
+	static int	timeout;
 
 	if (game->player->dir_y > 0)
 		y = (int)((game->player->p_y + (game->player->dir_y)
@@ -24,6 +25,12 @@ int	wall_in_front_y(t_game *game, double len)
 		y = (int)((game->player->p_y + (game->player->dir_y)
 					/ len * SPEED) - WALL_DISTANCE);
 	x = (int)(game->player->p_x);
+	if (open_horizone_door(game) == EXIT_SUCCESS && ++timeout < 5)
+	{
+		close_horizone_door(game);
+		return (true);
+	}
+	timeout = 0;
 	if (game->map[x][y] == '0')
 		return (false);
 	return (true);

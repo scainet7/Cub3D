@@ -6,11 +6,11 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 19:59:46 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 21:16:28 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../cub3D.h"
+#include "../../cub3D_bonus.h"
 
 static void	ft_record_color(t_game *game)
 {
@@ -56,6 +56,7 @@ static void	ft_init_textures_next(t_game *game, int i)
 		game->img->addr = mlx_get_data_addr(game->img->wall_ea,
 				&game->img->bits_per_pixel, &game->img->line_length,
 				&game->img->endian);
+	ft_init_textures_next_bonus(game, i);
 }
 
 static void	ft_init_textures(t_game *game)
@@ -63,7 +64,7 @@ static void	ft_init_textures(t_game *game)
 	int		i;
 
 	i = 0;
-	while (i < 4)
+	while (i < 7)
 	{
 		ft_init_textures_next(game, i);
 		if (game->img->addr == NULL)
@@ -99,6 +100,7 @@ static void	ft_record_types(t_game *game)
 					game->mlx, &types->maps_line[1][2], &x, &y);
 		types = types->next;
 	}
+	ft_record_types_bonus(game, x, y);
 }
 
 void	ft_record(t_game *game)

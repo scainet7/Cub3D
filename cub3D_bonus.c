@@ -6,17 +6,16 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:41:09 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 16:26:00 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 21:10:54 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3D.h"
+#include "cub3D_bonus.h"
 
 int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	game.flag = 1;
 	ft_check_map(&game, argc, argv);
 	ft_init_struckt(&game);
 	ft_player_position(&game);

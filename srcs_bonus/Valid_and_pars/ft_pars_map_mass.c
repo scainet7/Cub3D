@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pars_map_mass_bonus.c                           :+:      :+:    :+:   */
+/*   ft_pars_map_mass.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 19:48:21 by snino             #+#    #+#             */
-/*   Updated: 2022/10/25 20:23:46 by snino            ###   ########.fr       */
+/*   Created: 2022/09/20 15:41:54 by snino             #+#    #+#             */
+/*   Updated: 2022/10/23 12:13:40 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../cub3D_bonus.h"
+#include "../../cub3D_bonus.h"
 
-static void	ft_check_map_mass_space2_bonus(t_game *game, int n)
+static void	ft_check_map_mass_space2(t_game *game, int n)
 {
 	int		i;
 	int		j;
@@ -33,7 +33,7 @@ static void	ft_check_map_mass_space2_bonus(t_game *game, int n)
 	}
 }
 
-static void	ft_check_map_mass_space_bonus(t_game *game)
+static void	ft_check_map_mass_space(t_game *game)
 {
 	int		i;
 	int		j;
@@ -61,7 +61,36 @@ static void	ft_check_map_mass_space_bonus(t_game *game)
 	}
 }
 
-void	ft_check_map_mass_bonus(t_game *game)
+static void	ft_check_map_mass_symb(t_game *game)
+{
+	int		i;
+	int		j;
+	int		n;
+	char	**mass_map;
+
+	i = -1;
+	n = 0;
+	mass_map = game->map;
+	while (mass_map[++i])
+	{
+		j = -1;
+		while (mass_map[i][++j])
+		{
+			if (mass_map[i][j] == 'N' || mass_map[i][j] == 'S' \
+				|| mass_map[i][j] == 'W' || mass_map[i][j] == 'E')
+				n++;
+			else if (mass_map[i][j] != 'N' && mass_map[i][j] != 'S' \
+				&& mass_map[i][j] != 'W' && mass_map[i][j] != 'E' \
+				&& mass_map[i][j] != '1' && mass_map[i][j] != '0' \
+				&& mass_map[i][j] != ' ' && mass_map[i][j] != '\0')
+				ft_exit_game(game, "Error\nINVALID_MAP_SYMBOL", EXIT_FAILURE);
+		}
+	}
+	if (n != 1)
+		ft_exit_game(game, "Error\nINVALID_MAP_DOUBLE", EXIT_FAILURE);
+}
+
+void	ft_check_map_mass(t_game *game)
 {
 	char	**mass_map;
 	int		i;
@@ -82,13 +111,13 @@ void	ft_check_map_mass_bonus(t_game *game)
 		j++;
 	if (mass_map[i][j] != '1' && mass_map[i][j] != ' ' && mass_map[i][j])
 		ft_exit_game(game, "Error\nINVALID_MAP", EXIT_FAILURE);
-	ft_check_map_mass_symb_bonus(game);
-	ft_check_map_mass_space_bonus(game);
-	ft_check_map_mass_space2_bonus(game, i);
-	ft_check_map_mass_angle_bonus(game, i);
+	ft_check_map_mass_symb(game);
+	ft_check_map_mass_space(game);
+	ft_check_map_mass_space2(game, i);
+	ft_check_map_mass_angle(game, i);
 }
 
-void	ft_pars_map_mass_bonus(t_game *game)
+void	ft_pars_map_mass(t_game *game)
 {
 	t_list	*tmp_list;
 	char	**maps;

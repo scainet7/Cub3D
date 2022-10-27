@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:21:36 by snino             #+#    #+#             */
-/*   Updated: 2022/10/26 16:48:15 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 20:04:01 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ static void	ft_side_dist_x(t_game *game)
 
 void	ft_raycast(t_game *game, int x)
 {
-	game->door->door = false;
+	if (game->flag)
+		game->door->door = false;
 	game->ray->camera = 2 * x / (double)WIDTH - 1;
 	game->ray->dir_x = game->player->dir_x + game->player->plane_x
 		* game->ray->camera;

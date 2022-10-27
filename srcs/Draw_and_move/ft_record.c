@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/26 19:48:50 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 19:59:46 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,20 +56,20 @@ static void	ft_init_textures_next(t_game *game, int i)
 		game->img->addr = mlx_get_data_addr(game->img->wall_ea,
 				&game->img->bits_per_pixel, &game->img->line_length,
 				&game->img->endian);
-	else if (i == door)
-		game->img->addr = mlx_get_data_addr(game->img->door,
-				&game->img->bits_per_pixel, &game->img->line_length,
-				&game->img->endian);
-	else
+	if (game->flag)
 		ft_init_textures_next_bonus(game, i);
 }
 
 static void	ft_init_textures(t_game *game)
 {
 	int		i;
+	int 	num;
 
 	i = 0;
-	while (i < 12)
+	num = 4;
+	if (game->flag)
+		num = 7;
+	while (i < num)
 	{
 		ft_init_textures_next(game, i);
 		if (game->img->addr == NULL)

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:37:21 by snino             #+#    #+#             */
-/*   Updated: 2022/10/26 19:01:37 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 13:13:07 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ int	open_vert_door(t_game *game)
 	{
 		game->door->open_vert[0] = y;
 		game->door->open_vert[1] = x;
-		game->img->door = game->img->door5;
-		usleep(500);
 		game->map[y][x] = '0';
 		return (EXIT_SUCCESS);
 	}
@@ -92,7 +90,6 @@ int	open_horizone_door(t_game *game)
 	{
 		game->door->open_hor[0] = x;
 		game->door->open_hor[1] = y;
-
 		game->map[x][y] = '0';
 		return (EXIT_SUCCESS);
 	}

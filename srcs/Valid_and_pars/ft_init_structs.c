@@ -15,11 +15,16 @@
 static void ft_init_door(t_game *game)
 {
 	t_door	*door;
+	t_floor *floor;
 
 	door = malloc(sizeof (t_door));
 	if (!door)
 		ft_exit_game(game,
 					 "Error\nMALLOC_STRUCKT_DOOR", EXIT_FAILURE);
+	floor = malloc(sizeof (t_floor));
+	if (!floor)
+		ft_exit_game(game,
+					 "Error\nMALLOC_STRUCKT_FLOOR", EXIT_FAILURE);
 	game->door = door;
 	game->door->door = false;
 	game->door->open_vert[0] = -1;
@@ -31,6 +36,7 @@ static void ft_init_door(t_game *game)
 	game->door->side = 0;
 	game->door->dir_x = 0;
 	game->door->dir_y = 0;
+	game->floor = floor;
 }
 
 void	ft_init_struckt(t_game *game)

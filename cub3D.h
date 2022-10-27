@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/26 19:36:05 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 19:53:17 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,44 @@
 
 enum e_tex
 {
-	north	= 0,
-	south	= 1,
-	west	= 2,
-	east	= 3,
-	door	= 4,
-	door1	= 5,
-	door2	= 6,
-	door3	= 7,
-	door4	= 8,
-	door5	= 9,
-	door6	= 10,
-	door7	= 11,
+	north		= 0,
+	south		= 1,
+	west		= 2,
+	east		= 3,
+	door		= 4,
+	floors		= 5,
+	ceilings	= 6,
 };
+
+typedef struct s_floor
+{
+	int		p;
+	float 	posZ;
+	float	floorX;
+	float	floorY;
+	float	rayDirX0;
+	float	rayDirX1;
+	float	rayDirY0;
+	float	rayDirY1;
+	float	floorStepX;
+	float	floorStepY;
+	float	rowDistance;
+} t_floor;
+
+typedef struct s_ceiling
+{
+	int		p;
+	float 	posZ;
+	float	floorX;
+	float	floorY;
+	float	rayDirX0;
+	float	rayDirX2;
+	float	rayDirY0;
+	float	rayDirY1;
+	float	floorStepX;
+	float	floorStepY;
+	float	rowDistance;
+} t_ceiling;
 
 typedef struct s_door
 {
@@ -136,28 +161,16 @@ typedef struct s_img
 	int		line_length;
 	int		bits_per_pixel;
 	int		doors[IMG][IMG];
-	int		doors1[IMG][IMG];
-	int		doors2[IMG][IMG];
-	int		doors3[IMG][IMG];
-	int		doors4[IMG][IMG];
-	int		doors5[IMG][IMG];
-	int		doors6[IMG][IMG];
-	int		doors7[IMG][IMG];
+	int		floor_img[IMG][IMG];
 	int		east_wall[IMG][IMG];
 	int		west_wall[IMG][IMG];
 	int		north_wall[IMG][IMG];
 	int		south_wall[IMG][IMG];
+	int		ceiling_img[IMG][IMG];
 	char	*addr;
 	char	*mlx_addr;
 	void	*ptr;
 	void	*door;
-	void	*door1;
-	void	*door2;
-	void	*door3;
-	void	*door4;
-	void	*door5;
-	void	*door6;
-	void	*door7;
 	void	*floors;
 	void	*ceilings;
 	void	*wall_no;
@@ -191,9 +204,11 @@ typedef struct s_game
 	t_map		*colors;
 	t_wall		*wall;
 	t_door 		*door;
+	t_floor		*floor;
+	t_ceiling	*ceiling;
+	t_list		*map_list;
 	t_list		*type_list;
 	t_list		*color_list;
-	t_list		*map_list;
 	t_controls	controls;
 }	t_game;
 
@@ -260,6 +275,8 @@ int		open_horizone_door(t_game *game);
 int		close_horizone_door(t_game *game);
 int		mouse_hook(int x, int y, t_game *game);
 bool	is_wall(t_game *game, int x, int y, int p_x);
+
+void	ft_draw_bonus(t_game *game);
 void	ft_draw_minimap(t_game *game);
 void	ft_draw_doors(t_game *game, int x);
 void	ft_pars_map_mass_bonus(t_game *game);
@@ -268,7 +285,9 @@ void	ft_check_map_mass_symb_bonus(t_game *game);
 void	ft_init_textures_next_bonus(t_game *game, int i);
 void	ft_record_types_bonus(t_game *game, int x, int y);
 void	ft_check_map_mass_angle_bonus(t_game *game, int n);
-void	ft_get_wall_pixels_bonus(t_img *img,int type, int i, int j);
+
+void	ft_init_textures_next_bonus(t_game *game, int i);
+void	ft_get_wall_pixels_bonus(t_img *img, int type, int i, int j);
 
 //show
 void	show(t_list *list, char *str);

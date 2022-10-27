@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 21:05:17 by snino             #+#    #+#             */
-/*   Updated: 2022/10/26 18:02:40 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/27 20:04:51 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,20 @@ int	ft_draw_game(t_game *game)
 	x = 0;
 	check_events(game);
 	usleep(5000);
+	if (game->flag)
+		ft_draw_bonus(game);
 	while (x < WIDTH)
 	{
 		ft_raycast(game, x);
 		ft_draw_walls(game, x);
-		draw_ceiling(game, x, game->wall->start);
-		draw_floor(game, x, game->wall->end);
-		if (game->door->door)
-			ft_draw_doors(game, x);
+		if (!game->flag)
+		{
+			draw_ceiling(game, x, game->wall->start);
+			draw_floor(game, x, game->wall->end);
+		}
+		if (game->flag)
+			if (game->door->door)
+					ft_draw_doors(game, x);
 		x++;
 	}
 	if (game->flag)

@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/10/26 16:50:25 by snino            ###   ########.fr        #
+#    Updated: 2022/10/27 13:13:52 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,8 +57,9 @@ SRCS 			:=	cub3D.c\
 					$(addprefix srcs_bonus/,\
                     ft_minimap.c\
                     ft_move_door.c\
-                    ft_move_bonus.c\
                     ft_draw_doors.c\
+                    ft_draw_bonus.c\
+                    ft_record_types_bonus.c\
                     ft_pars_map_mass_bonus.c\
                     ft_pars_map_mass2_bonus.c)\
 
@@ -93,8 +94,8 @@ BONUS_SRCS		:=	cub3D_bonus.c\
 					$(addprefix srcs_bonus/,\
 					ft_minimap.c\
 					ft_move_door.c\
-                   	ft_move_bonus.c\
                     ft_draw_doors.c\
+                    ft_draw_bonus.c\
                     ft_record_types_bonus.c\
                     ft_pars_map_mass_bonus.c\
                     ft_pars_map_mass2_bonus.c)\

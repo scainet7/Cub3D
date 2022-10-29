@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3D_bonus.h                                            :+:      :+:    :+:   */
+/*   cub3D_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 19:54:16 by snino            ###   ########.fr       */
+/*   Created: 2022/10/29 18:42:11 by snino             #+#    #+#             */
+/*   Updated: 2022/10/29 18:49:13 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+#ifndef CUB3D_BONUS_H
+# define CUB3D_BONUS_H
 
 # include <math.h>
 # include <fcntl.h>
@@ -29,16 +29,15 @@
 # define MAG "\033[35m"
 # define END "\033[0m"
 # define WIDTH			2048
-# define HEIGHT			1024
+# define HEIGHT			1056
 # define SPEED			0.03
 # define ROTATE_SPEED	-0.03
 # define FOV			0.66
-# define IMG			1024
+# define IMG			512
 # define MIMG			15
 # define PI				3.14159265
 # define WALL_DISTANCE 	0.3
 # define CORNER			0.25
-
 # define MOVE_LEFT 		0
 # define MOVE_RIGHT 	2
 # define MOVE_DOWN 		1
@@ -61,32 +60,17 @@ enum e_tex
 typedef struct s_floor
 {
 	int		p;
-	float 	posZ;
-	float	floorX;
-	float	floorY;
-	float	rayDirX0;
-	float	rayDirX1;
-	float	rayDirY0;
-	float	rayDirY1;
-	float	floorStepX;
-	float	floorStepY;
-	float	rowDistance;
-} t_floor;
-
-typedef struct s_ceiling
-{
-	int		p;
-	float 	posZ;
-	float	floorX;
-	float	floorY;
-	float	rayDirX0;
-	float	rayDirX2;
-	float	rayDirY0;
-	float	rayDirY1;
-	float	floorStepX;
-	float	floorStepY;
-	float	rowDistance;
-} t_ceiling;
+	float	pos_z;
+	float	floor_x;
+	float	floor_y;
+	float	ray_dir_x0;
+	float	ray_dir_x1;
+	float	ray_dir_y0;
+	float	ray_dir_y1;
+	float	floor_step_x;
+	float	floor_step_y;
+	float	row_distance;
+}	t_floor;
 
 typedef struct s_door
 {
@@ -118,7 +102,7 @@ typedef struct s_player_position
 	int			y;
 	float		p_x;
 	float		p_y;
-	float 		angle;
+	float		angle;
 	double		dir_x;
 	double		dir_y;
 	double		plane_x;
@@ -172,11 +156,11 @@ typedef struct s_img
 	void	*ptr;
 	void	*door;
 	void	*floors;
-	void	*ceilings;
 	void	*wall_no;
 	void	*wall_so;
 	void	*wall_we;
 	void	*wall_ea;
+	void	*ceilings;
 }	t_img;
 
 typedef struct s_map
@@ -192,7 +176,7 @@ typedef struct s_game
 	int			color;
 	int			enter;
 	int			width;
-	int 		height;
+	int			height;
 	void		*mlx;
 	void		*win;
 	char		*map_name;
@@ -203,9 +187,8 @@ typedef struct s_game
 	t_map		*types;
 	t_map		*colors;
 	t_wall		*wall;
-	t_door 		*door;
+	t_door		*door;
 	t_floor		*floor;
-	t_ceiling	*ceiling;
 	t_list		*map_list;
 	t_list		*type_list;
 	t_list		*color_list;
@@ -275,7 +258,6 @@ int		open_horizone_door(t_game *game);
 int		close_horizone_door(t_game *game);
 int		mouse_hook(int x, int y, t_game *game);
 bool	is_wall(t_game *game, int x, int y, int p_x);
-
 void	ft_draw_bonus(t_game *game);
 void	ft_draw_minimap(t_game *game);
 void	ft_draw_doors(t_game *game, int x);
@@ -285,8 +267,6 @@ void	ft_check_map_mass_symb_bonus(t_game *game);
 void	ft_init_textures_next_bonus(t_game *game, int i);
 void	ft_record_types_bonus(t_game *game, int x, int y);
 void	ft_check_map_mass_angle_bonus(t_game *game, int n);
-
-void	ft_init_textures_next_bonus(t_game *game, int i);
 void	ft_get_wall_pixels_bonus(t_img *img, int type, int i, int j);
 
 //show

@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:55:26 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 21:16:28 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/29 18:15:29 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,16 @@ static void	ft_record_types(t_game *game)
 
 void	ft_record(t_game *game)
 {
+	int	i;
+
 	ft_record_types(game);
 	ft_init_textures(game);
 	ft_record_color(game);
+	i = 0;
+	while (i < 3)
+	{
+		if (game->img->floor[i] == 0 && game->img->ceiling[i] == 0)
+			game->flag++;
+		i++;
+	}
 }

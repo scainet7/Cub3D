@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:41:09 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 21:10:54 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/29 17:13:12 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
+	game.flag = 0;
 	ft_check_map(&game, argc, argv);
 	ft_init_struckt(&game);
 	ft_player_position(&game);

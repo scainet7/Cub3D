@@ -4,8 +4,8 @@ WE ./textures/star_Wall_bonus.xpm
 EA ./textures/star_Wall_bonus.xpm
 
 
-C 255,255,255
-F 170,170,170
+C 0,0,0
+F 0,0,0
 
 
 11111111111111111111111111111

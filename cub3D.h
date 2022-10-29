@@ -6,7 +6,7 @@
 /*   By: snino <snino@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:55:24 by snino             #+#    #+#             */
-/*   Updated: 2022/10/27 19:54:16 by snino            ###   ########.fr       */
+/*   Updated: 2022/10/29 18:41:14 by snino            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@
 # define SPEED			0.03
 # define ROTATE_SPEED	-0.03
 # define FOV			0.66
-# define IMG			1024
+# define IMG			512
 # define WALL_DISTANCE 	0.3
 # define CORNER			0.25
 
@@ -70,7 +70,7 @@ typedef struct s_player_position
 	int			y;
 	float		p_x;
 	float		p_y;
-	float 		angle;
+	float		angle;
 	double		dir_x;
 	double		dir_y;
 	double		plane_x;
@@ -112,19 +112,13 @@ typedef struct s_img
 	int		ceiling[3];
 	int		line_length;
 	int		bits_per_pixel;
-	int		doors[IMG][IMG];
-	int		floor_img[IMG][IMG];
 	int		east_wall[IMG][IMG];
 	int		west_wall[IMG][IMG];
 	int		north_wall[IMG][IMG];
 	int		south_wall[IMG][IMG];
-	int		ceiling_img[IMG][IMG];
 	char	*addr;
 	char	*mlx_addr;
 	void	*ptr;
-	void	*door;
-	void	*floors;
-	void	*ceilings;
 	void	*wall_no;
 	void	*wall_so;
 	void	*wall_we;
@@ -139,12 +133,11 @@ typedef struct s_map
 
 typedef struct s_game
 {
-	int			flag;
 	int			type;
 	int			color;
 	int			enter;
 	int			width;
-	int 		height;
+	int			height;
 	void		*mlx;
 	void		*win;
 	char		*map_name;

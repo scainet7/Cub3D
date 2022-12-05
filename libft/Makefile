@@ -6,7 +6,7 @@
 #    By: snino <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 16:23:18 by snino             #+#    #+#              #
-#    Updated: 2022/10/23 12:13:40 by snino            ###   ########.fr        #
+#    Updated: 2022/12/05 18:35:28 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,28 +69,34 @@ SRCS			:=	$(addprefix Part1/,\
 					get_next_line_utils.c)\
 
 
-HEADER		=	libft.h
+HEADER			:=	libft.h
 
-OBJ			=	$(patsubst %.c, %.o, $(SRCS))
+OBJ_DIR			:=	obj
 
-CC			=	gcc
+OBJ				:=	$(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(SRCS)))
 
-CFLAGS		=	-Wall -Wextra -Werror
+CC				:=	gcc
 
-.PHONY	:	all claen fclean re
+CFLAGS			:=	-Wall -Wextra -Werror
 
-all		:	$(NAME)
+.PHONY			:	all claen fclean re
 
-$(NAME)	:	$(OBJ) $(HEADER)
-		ar rc $(NAME) $(OBJ)
+all				:	$(NAME)
 
-%.o		:	%.c $(HEADER)
-		$(CC) $(CFLAGS) -c $< -o $@ -I .
+$(NAME)			:	$(HEADER) $(OBJ)
+					ar rc $(NAME) $(OBJ)
 
-clean	:
-		@rm -f $(OBJ)
+$(OBJ_DIR)/%.o	:  	%.c $(HEADER)
+					@mkdir -p $(OBJ_DIR)/Part1
+					@mkdir -p $(OBJ_DIR)/Part2
+					@mkdir -p $(OBJ_DIR)/Bonus_Part
+					@mkdir -p $(OBJ_DIR)/Other_and_Personal
+					$(CC) $(CFLAGS) -c $< -o $@
 
-fclean	:		clean
-		@$(RM) $(NAME)
+clean			:
+					@rm -f $(OBJ)
 
-re		:		fclean all
+fclean			:	clean
+					@$(RM) $(NAME)
+					@rm -rf obj
+re				:		fclean all

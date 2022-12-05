@@ -6,7 +6,7 @@
 #    By: snino <snino@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/05 17:57:38 by snino             #+#    #+#              #
-#    Updated: 2022/11/05 12:54:17 by snino            ###   ########.fr        #
+#    Updated: 2022/12/05 18:36:33 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -139,7 +139,7 @@ clean				:
 fclean				:	clean
 						$(MAKE) -C ./minilibx clean
 						@$(RM) $(NAME)
-						@$(RM) obj
+						@rm -rf obj
 						@$(RM) $(B_NAME)
 						@make -C $(LIBF_DIR) fclean
 
